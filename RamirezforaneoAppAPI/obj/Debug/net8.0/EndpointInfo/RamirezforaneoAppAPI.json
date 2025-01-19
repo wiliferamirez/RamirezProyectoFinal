@@ -48,6 +48,37 @@
         }
       }
     },
+    "/api/UserManagement/register": {
+      "post": {
+        "tags": [
+          "UserManagement"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserAPI"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserAPI"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserAPI"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -112,6 +143,50 @@
           "twoFactorRecoveryCode": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserAPI": {
+        "required": [
+          "cedulaUser",
+          "email",
+          "password",
+          "sessionNumber",
+          "stateName",
+          "studyProgram"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "maxLength": 100,
+            "minLength": 6,
+            "type": "string"
+          },
+          "cedulaUser": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "studyProgram": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sessionNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stateName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "userCreationDate": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
