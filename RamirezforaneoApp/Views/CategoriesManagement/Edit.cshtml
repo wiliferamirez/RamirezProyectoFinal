@@ -1,0 +1,37 @@
+﻿@model RamirezforaneoApp.Models.Category
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<br />
+<h1>Edit Category</h1>
+<hr />
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CategoryId" />
+            <div class="form-group">
+                <label asp-for="CategoryName" class="control-label"></label>
+                <input asp-for="CategoryName" class="form-control" />
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
+            </div>
+
+        </form>
+    </div>
+</div>
+<br />
+<div class="row mb-4">
+    <div class="col">
+        <button type="submit" class="btn btn-primary form-control">Save</button>
+    </div>
+    &nbsp;
+    <div class="col">
+        <a asp-action="Index" class="btn btn-success form-control">Back</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

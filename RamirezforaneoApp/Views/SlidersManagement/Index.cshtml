@@ -1,0 +1,40 @@
+﻿@model IEnumerable<RamirezforaneoApp.Models.Slider>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="AddImage">Add Image</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SliderImageId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.SliderUrlImage)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SliderImageId)
+                </td>
+                <td>
+                    <img src="@item.SliderUrlImage" alt="Slider Image" style="max-width: 200px; height: auto;" />
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.SliderUrlImage">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

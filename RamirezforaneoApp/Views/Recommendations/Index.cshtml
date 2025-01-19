@@ -1,0 +1,48 @@
+﻿@using System.Linq
+@model List<RamirezforaneoApp.AccesPoint.GoogleAccesPoint.LocalResult>
+@{
+    ViewData["Title"] = "Recommendations";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<form method="post" asp-action="Search">
+    <div class="mb-3">
+        <label for="query" class="form-label">Search for Places near Udla Park</label>
+        <input type="text" class="form-control" id="query" name="query" placeholder="Enter place type (e.g., pizza, hotel, beer)" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+
+@if (Model != null && Model.Any())
+{
+    <div class="row">
+        @foreach (var place in Model)
+        {
+            <div class="card-group col-sm-3">
+                <div class="card text-white bg-dark" style="width: 300px;">
+                    @if (!string.IsNullOrEmpty(place.PlaceImageUrl))
+                    {
+                        <img src="@place.PlaceImageUrl" class="card-img-top" alt="Image of @place.PlaceName" />
+                    }
+                    else
+                    {
+                        <img src="@place.PlaceImageUrl" alt="Image of @place.PlaceName" width="80" height="auto" />
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@place.PlaceName</h5>
+                        <p class="card-text">@place.PlaceAddress</p>
+                        <p class="card-text">@place.PlacePhone</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+}
+else
+{
+    <p>No results found. Please try again.</p>
+}

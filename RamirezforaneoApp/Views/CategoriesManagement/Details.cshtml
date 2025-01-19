@@ -1,0 +1,26 @@
+﻿@model RamirezforaneoApp.Models.Category
+
+@{
+    ViewData["Title"] = "Details";
+}
+<br />
+<h1>Category Details</h1>
+<hr />
+<br />
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+    </dl>
+</div>
+
+<br />
+<div class="row mb-4">
+    <div class="col">
+        <a asp-action="Index" class="btn btn-success form-control">Back</a>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿@page
+@model RamirezforaneoApp.Areas.Identity.Pages.Account.Manage.MarketItemsModel
+@{
+    ViewData["Title"] = "Your Items";
+}
+<h2>Market Items</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Item Name</th>
+            <th>Description</th>
+            <th>Item Price</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.MarketItems)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ItemName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Category.CategoryName)</td>
+                <td>@Html.DisplayFor(modelItem => item.ItemDescription)</td>
+                <td>@Html.DisplayFor(modelItem => item.ItemPrice)</td>
+                <img src="@item.ItemImageUrl" alt="Image of @item.ItemName" width="80" height="auto" />
+            </tr>
+        }
+    </tbody>
+</table>
+

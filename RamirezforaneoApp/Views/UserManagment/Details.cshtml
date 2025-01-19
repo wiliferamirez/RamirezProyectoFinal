@@ -1,0 +1,59 @@
+﻿@model RamirezforaneoApp.Models.User
+@{
+    ViewData["Title"] = "View User Info";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>UserManagment</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CedulaUser)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CedulaUser)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StudyProgram)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudyProgram)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SessionNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SessionNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StateName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StateName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserCreationDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserCreationDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
