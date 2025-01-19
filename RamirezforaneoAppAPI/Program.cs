@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using RamirezforaneoApp.Data;
 using RamirezforaneoApp.Models;
 using System.Text;
+using RamirezforaneoAppAPI.Controllers.Admin;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,5 +55,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapCategoryEndpoints();
 
 app.Run();

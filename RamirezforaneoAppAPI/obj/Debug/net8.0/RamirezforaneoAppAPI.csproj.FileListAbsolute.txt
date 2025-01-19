@@ -305,3 +305,5 @@ C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppAPI
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppAPI\bin\Debug\net8.0\RamirezforaneoApp.dll
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppAPI\bin\Debug\net8.0\RamirezforaneoApp.pdb
+C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppAPI\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll

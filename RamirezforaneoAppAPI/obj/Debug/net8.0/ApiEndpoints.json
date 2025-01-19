@@ -1,5 +1,155 @@
 [
   {
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoryAPIEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCategoryEndpoints\u003Eb__0_0",
+    "RelativePath": "api/Category/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RamirezforaneoApp.Models.Category, RamirezforaneoApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Category"
+    ],
+    "EndpointName": "GetAllCategories"
+  },
+  {
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoryAPIEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCategoryEndpoints\u003Eb__0_3",
+    "RelativePath": "api/Category/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "category",
+        "Type": "RamirezforaneoApp.Models.Category",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RamirezforaneoApp.Models.Category",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 201
+      }
+    ],
+    "Tags": [
+      "Category"
+    ],
+    "EndpointName": "CreateCategory"
+  },
+  {
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoryAPIEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCategoryEndpoints\u003Eb__0_1",
+    "RelativePath": "api/Category/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RamirezforaneoApp.Models.Category",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 404
+      }
+    ],
+    "Tags": [
+      "Category"
+    ],
+    "EndpointName": "GetCategoryById"
+  },
+  {
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoryAPIEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCategoryEndpoints\u003Eb__0_2",
+    "RelativePath": "api/Category/{id}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "category",
+        "Type": "RamirezforaneoApp.Models.Category",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 404
+      }
+    ],
+    "Tags": [
+      "Category"
+    ],
+    "EndpointName": "UpdateCategory"
+  },
+  {
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoryAPIEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCategoryEndpoints\u003Eb__0_4",
+    "RelativePath": "api/Category/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 404
+      }
+    ],
+    "Tags": [
+      "Category"
+    ],
+    "EndpointName": "DeleteCategory"
+  },
+  {
     "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.UserManagementController",
     "Method": "GetUsers",
     "RelativePath": "api/UserManagement",
@@ -40,26 +190,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RamirezforaneoAppAPI.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[RamirezforaneoAppAPI.WeatherForecast, RamirezforaneoAppAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]
