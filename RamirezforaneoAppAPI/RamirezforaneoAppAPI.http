@@ -1,0 +1,6 @@
+@RamirezforaneoAppAPI_HostAddress = http://localhost:5262
+
+GET {{RamirezforaneoAppAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

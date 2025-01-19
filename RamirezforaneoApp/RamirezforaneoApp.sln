@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RamirezforaneoApp", "RamirezforaneoApp.csproj", "{13E5296C-EECD-488D-A0AA-A864A7A68024}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RamirezforaneoAppAPI", "..\RamirezforaneoAppAPI\RamirezforaneoAppAPI.csproj", "{E9A80614-B723-452B-A4C7-978729D88873}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{13E5296C-EECD-488D-A0AA-A864A7A68024}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13E5296C-EECD-488D-A0AA-A864A7A68024}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13E5296C-EECD-488D-A0AA-A864A7A68024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A80614-B723-452B-A4C7-978729D88873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A80614-B723-452B-A4C7-978729D88873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A80614-B723-452B-A4C7-978729D88873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A80614-B723-452B-A4C7-978729D88873}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
