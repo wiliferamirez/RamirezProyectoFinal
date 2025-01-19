@@ -7,6 +7,7 @@ using RamirezforaneoApp.Data;
 using RamirezforaneoApp.Models;
 using System.Drawing.Text;
 using RamirezforaneoAppAPI.Model;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RamirezforaneoAppAPI.Controllers.Admin
 {
@@ -28,13 +29,14 @@ namespace RamirezforaneoAppAPI.Controllers.Admin
         }
 
         // GET: api/Users
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetUsers()
         {
             var users = _userManager.Users.ToList();
             return Ok(users);
         }
-
+        [AllowAnonymous]
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest model)
         {
@@ -46,8 +48,7 @@ namespace RamirezforaneoAppAPI.Controllers.Admin
 
             return Ok(new { Message = "Login successful", UserId = user.Id, Email = user.Email });
         }
-
-
+        [AllowAnonymous]
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserAPI model)
         {
