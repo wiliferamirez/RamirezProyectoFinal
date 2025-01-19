@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RamirezforaneoAppAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6142769552f8f320ebfde81baeaa78a145a2ffe1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a1fc1aec42fa5f2b917b5d611a02d9c871372e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("RamirezforaneoAppAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RamirezforaneoAppAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
