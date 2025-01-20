@@ -172,6 +172,115 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.MarketsManagementController",
+    "Method": "GetMarket",
+    "RelativePath": "api/MarketsManagement",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RamirezforaneoApp.Models.Market, RamirezforaneoApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.MarketsManagementController",
+    "Method": "PostMarket",
+    "RelativePath": "api/MarketsManagement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "market",
+        "Type": "RamirezforaneoApp.Models.Market",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RamirezforaneoApp.Models.Market",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.MarketsManagementController",
+    "Method": "GetMarket",
+    "RelativePath": "api/MarketsManagement/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RamirezforaneoApp.Models.Market",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.MarketsManagementController",
+    "Method": "PutMarket",
+    "RelativePath": "api/MarketsManagement/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "market",
+        "Type": "RamirezforaneoApp.Models.Market",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.MarketsManagementController",
+    "Method": "DeleteMarket",
+    "RelativePath": "api/MarketsManagement/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.UserManagementController",
     "Method": "GetUsers",
     "RelativePath": "api/UserManagement",
