@@ -8,6 +8,10 @@ using RamirezforaneoApp.Models;
 using System.Drawing.Text;
 using RamirezforaneoAppAPI.Model;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace RamirezforaneoAppAPI.Controllers.Admin
 {
@@ -19,17 +23,19 @@ namespace RamirezforaneoAppAPI.Controllers.Admin
         private readonly UserManager<User> _userManager;
         private readonly ILogger<User> _logger;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IConfiguration _configuration;
 
-        public UserManagementController(UserManager<User> userManager, ILogger<User> logger, ApplicationDbContext context, RoleManager<IdentityRole> roleManager)
+        public UserManagementController(UserManager<User> userManager, ILogger<User> logger, ApplicationDbContext context, RoleManager<IdentityRole> roleManager, IConfiguration configuration)
         {
             _userManager = userManager;
             _logger = logger;
             _context = context;
             _roleManager = roleManager;
+            _configuration = configuration;
         }
 
         // GET: api/Users
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetUsers()
         {
@@ -46,7 +52,9 @@ namespace RamirezforaneoAppAPI.Controllers.Admin
                 return Unauthorized(new { Message = "Invalid login attempt." });
             }
 
-            return Ok(new { Message = "Login successful", UserId = user.Id, Email = user.Email });
+            var token = GenerateJwtToken(user);
+
+            return Ok(new { Message = "Login successful", UserId = user.Id, Email = user.Email, Token = token });
         }
         [AllowAnonymous]
         [HttpPost("register")]
@@ -83,6 +91,31 @@ namespace RamirezforaneoAppAPI.Controllers.Admin
             }
 
             return BadRequest(ModelState);
+        }
+
+        private async Task<string> GenerateJwtToken(User user)
+        {
+            var claims = new[]
+            {
+        new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        new Claim(ClaimTypes.NameIdentifier, user.Id),
+
+        new Claim(ClaimTypes.Role, "Admin"), 
+    };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddDays(1), 
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
 

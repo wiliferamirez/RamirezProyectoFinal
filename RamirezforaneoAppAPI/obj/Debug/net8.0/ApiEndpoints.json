@@ -1,32 +1,20 @@
 [
   {
-    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoryAPIEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapCategoryEndpoints\u003Eb__0_0",
-    "RelativePath": "api/Category/",
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoriesManagementController",
+    "Method": "GetCategories",
+    "RelativePath": "api/CategoriesManagement",
     "HttpMethod": "GET",
-    "IsController": false,
+    "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[RamirezforaneoApp.Models.Category, RamirezforaneoApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "Tags": [
-      "Category"
-    ],
-    "EndpointName": "GetAllCategories"
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoryAPIEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapCategoryEndpoints\u003Eb__0_3",
-    "RelativePath": "api/Category/",
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoriesManagementController",
+    "Method": "CreateCategory",
+    "RelativePath": "api/CategoriesManagement",
     "HttpMethod": "POST",
-    "IsController": false,
+    "IsController": true,
     "Order": 0,
     "Parameters": [
       {
@@ -35,63 +23,18 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "RamirezforaneoApp.Models.Category",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 201
-      }
-    ],
-    "Tags": [
-      "Category"
-    ],
-    "EndpointName": "CreateCategory"
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoryAPIEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapCategoryEndpoints\u003Eb__0_1",
-    "RelativePath": "api/Category/{id}",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "categoryid",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "RamirezforaneoApp.Models.Category",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 200
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 404
-      }
-    ],
-    "Tags": [
-      "Category"
-    ],
-    "EndpointName": "GetCategoryById"
-  },
-  {
-    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoryAPIEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapCategoryEndpoints\u003Eb__0_2",
-    "RelativePath": "api/Category/{id}",
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoriesManagementController",
+    "Method": "UpdateCategory",
+    "RelativePath": "api/CategoriesManagement/{id}",
     "HttpMethod": "PUT",
-    "IsController": false,
+    "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "categoryid",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       },
@@ -101,53 +44,23 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 404
-      }
-    ],
-    "Tags": [
-      "Category"
-    ],
-    "EndpointName": "UpdateCategory"
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoryAPIEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapCategoryEndpoints\u003Eb__0_4",
-    "RelativePath": "api/Category/{id}",
+    "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.CategoriesManagementController",
+    "Method": "DeleteCategory",
+    "RelativePath": "api/CategoriesManagement/{id}",
     "HttpMethod": "DELETE",
-    "IsController": false,
+    "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "categoryid",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 404
-      }
-    ],
-    "Tags": [
-      "Category"
-    ],
-    "EndpointName": "DeleteCategory"
+    "ReturnTypes": []
   },
   {
     "ContainingType": "RamirezforaneoAppAPI.Controllers.Admin.UserManagementController",

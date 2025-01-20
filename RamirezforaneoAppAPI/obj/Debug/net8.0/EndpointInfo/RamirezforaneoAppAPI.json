@@ -5,105 +5,20 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Category": {
+    "/api/CategoriesManagement": {
       "get": {
         "tags": [
-          "Category"
+          "CategoriesManagement"
         ],
-        "operationId": "GetAllCategories",
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Category"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
       "post": {
         "tags": [
-          "Category"
-        ],
-        "operationId": "CreateCategory",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Category"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Category"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Category/{id}": {
-      "get": {
-        "tags": [
-          "Category"
-        ],
-        "operationId": "GetCategoryById",
-        "parameters": [
-          {
-            "name": "categoryid",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Category"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Category"
-        ],
-        "operationId": "UpdateCategory",
-        "parameters": [
-          {
-            "name": "categoryid",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
+          "CategoriesManagement"
         ],
         "requestBody": {
           "content": {
@@ -111,28 +26,75 @@
               "schema": {
                 "$ref": "#/components/schemas/Category"
               }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/CategoriesManagement/{id}": {
+      "put": {
+        "tags": [
+          "CategoriesManagement"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       },
       "delete": {
         "tags": [
-          "Category"
+          "CategoriesManagement"
         ],
-        "operationId": "DeleteCategory",
         "parameters": [
           {
-            "name": "categoryid",
-            "in": "query",
+            "name": "id",
+            "in": "path",
             "required": true,
             "schema": {
               "type": "integer",
@@ -143,9 +105,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
           }
         }
       }
@@ -314,6 +273,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Please enter a valid token",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
