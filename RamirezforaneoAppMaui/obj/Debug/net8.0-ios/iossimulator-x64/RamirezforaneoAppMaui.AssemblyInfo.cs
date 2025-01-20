@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RamirezforaneoAppMaui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+faa7c7620832d577a500b41c94a16dec3a28cd15")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f0b9887eacd86dd2965ba9bd062afa911e326e4b")]
 [assembly: System.Reflection.AssemblyProductAttribute("RamirezforaneoAppMaui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RamirezforaneoAppMaui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
