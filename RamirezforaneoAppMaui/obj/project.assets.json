@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net8.0-android34.0": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -2222,6 +2234,18 @@
       }
     },
     "net8.0-android34.0/android-arm": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -4442,6 +4466,18 @@
       }
     },
     "net8.0-android34.0/android-arm64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -6662,6 +6698,18 @@
       }
     },
     "net8.0-android34.0/android-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -8882,6 +8930,18 @@
       }
     },
     "net8.0-android34.0/android-x86": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -11102,6 +11162,18 @@
       }
     },
     "net8.0-android34.0/iossimulator-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -13322,6 +13394,18 @@
       }
     },
     "net8.0-android34.0/maccatalyst-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -15542,6 +15626,18 @@
       }
     },
     "net8.0-android34.0/win10-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -17762,6 +17858,18 @@
       }
     },
     "net8.0-ios18.0": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -18196,6 +18304,18 @@
       }
     },
     "net8.0-ios18.0/android-arm": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -18630,6 +18750,18 @@
       }
     },
     "net8.0-ios18.0/android-arm64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -19064,6 +19196,18 @@
       }
     },
     "net8.0-ios18.0/android-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -19498,6 +19642,18 @@
       }
     },
     "net8.0-ios18.0/android-x86": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -19932,6 +20088,18 @@
       }
     },
     "net8.0-ios18.0/iossimulator-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -20366,6 +20534,18 @@
       }
     },
     "net8.0-ios18.0/maccatalyst-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -20800,6 +20980,18 @@
       }
     },
     "net8.0-ios18.0/win10-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -21234,6 +21426,18 @@
       }
     },
     "net8.0-maccatalyst18.0": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -21668,6 +21872,18 @@
       }
     },
     "net8.0-maccatalyst18.0/android-arm": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -22102,6 +22318,18 @@
       }
     },
     "net8.0-maccatalyst18.0/android-arm64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -22536,6 +22764,18 @@
       }
     },
     "net8.0-maccatalyst18.0/android-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -22970,6 +23210,18 @@
       }
     },
     "net8.0-maccatalyst18.0/android-x86": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -23404,6 +23656,18 @@
       }
     },
     "net8.0-maccatalyst18.0/iossimulator-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -23838,6 +24102,18 @@
       }
     },
     "net8.0-maccatalyst18.0/maccatalyst-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -24272,6 +24548,18 @@
       }
     },
     "net8.0-maccatalyst18.0/win10-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -24706,6 +24994,18 @@
       }
     },
     "net8.0-windows10.0.19041": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -25309,6 +25609,18 @@
       }
     },
     "net8.0-windows10.0.19041/android-arm": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -25872,6 +26184,18 @@
       }
     },
     "net8.0-windows10.0.19041/android-arm64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -26435,6 +26759,18 @@
       }
     },
     "net8.0-windows10.0.19041/android-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -26998,6 +27334,18 @@
       }
     },
     "net8.0-windows10.0.19041/android-x86": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -27561,6 +27909,18 @@
       }
     },
     "net8.0-windows10.0.19041/iossimulator-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -28124,6 +28484,18 @@
       }
     },
     "net8.0-windows10.0.19041/maccatalyst-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -28687,6 +29059,18 @@
       }
     },
     "net8.0-windows10.0.19041/win10-x64": {
+      "google-search-results-dotnet/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/serpapi.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -29257,6 +29641,19 @@
     }
   },
   "libraries": {
+    "google-search-results-dotnet/2.0.1": {
+      "sha512": "0zn2eLhmyCWlo2eHb/U6txtVzNmfMBXe3LLh9SGNXGkiE55FF7mD12VypqYwvayGH9yF+EgPA6zoa2RgfchPog==",
+      "type": "package",
+      "path": "google-search-results-dotnet/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MIT-LICENSE.txt",
+        "google-search-results-dotnet.2.0.1.nupkg.sha512",
+        "google-search-results-dotnet.nuspec",
+        "lib/netcoreapp3.1/serpapi.dll"
+      ]
+    },
     "GoogleGson/2.10.1.4": {
       "sha512": "L1vdbwbQzvKUoUGiMpMoJG5fqfLXaP6zMy1a26AYJQJSQKUO7Ojr2U5BAmgQoRxQ8J2GDjBfnfgnrsnorb4y5Q==",
       "type": "package",
@@ -33475,27 +33872,31 @@
       "Microsoft.Maui.Controls >= 8.0.83",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.83",
       "Microsoft.NET.ILLink.Tasks >= 8.0.11",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "google-search-results-dotnet >= 2.0.1"
     ],
     "net8.0-ios18.0": [
       "Microsoft.Extensions.Logging.Debug >= 8.0.1",
       "Microsoft.Maui.Controls >= 8.0.83",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.83",
       "Microsoft.NET.ILLink.Tasks >= 8.0.11",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "google-search-results-dotnet >= 2.0.1"
     ],
     "net8.0-maccatalyst18.0": [
       "Microsoft.Extensions.Logging.Debug >= 8.0.1",
       "Microsoft.Maui.Controls >= 8.0.83",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.83",
       "Microsoft.NET.ILLink.Tasks >= 8.0.11",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "google-search-results-dotnet >= 2.0.1"
     ],
     "net8.0-windows10.0.19041": [
       "Microsoft.Extensions.Logging.Debug >= 8.0.1",
       "Microsoft.Maui.Controls >= 8.0.83",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.83",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "google-search-results-dotnet >= 2.0.1"
     ]
   },
   "packageFolders": {
@@ -33586,6 +33987,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "google-search-results-dotnet": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           }
         },
         "imports": [
@@ -33655,6 +34060,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "google-search-results-dotnet": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           }
         },
         "imports": [
@@ -33712,6 +34121,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "google-search-results-dotnet": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           }
         },
         "imports": [
@@ -33764,6 +34177,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "google-search-results-dotnet": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           }
         },
         "imports": [

@@ -197,6 +197,7 @@ C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMau
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\ms\Microsoft.Maui.Controls.resources.dll
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\nb\Microsoft.Maui.Controls.resources.dll
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\netstandard.dll
+C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\Newtonsoft.Json.dll
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\nl\Microsoft.Maui.Controls.resources.dll
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\pl\Microsoft.Maui.Controls.resources.dll
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\pt-BR\Microsoft.Maui.Controls.resources.dll
@@ -205,6 +206,7 @@ C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMau
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\RamirezforaneoAppMaui.pdb
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\ro\Microsoft.Maui.Controls.resources.dll
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\ru\Microsoft.Maui.Controls.resources.dll
+C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\serpapi.dll
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\sk\Microsoft.Maui.Controls.resources.dll
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\sv\Microsoft.Maui.Controls.resources.dll
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoAppMaui\obj\Debug\net8.0-android\android\assets\System.AppContext.dll

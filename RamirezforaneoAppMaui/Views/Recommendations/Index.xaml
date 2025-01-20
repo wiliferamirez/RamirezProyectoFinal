@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RamirezforaneoAppMaui.Views.Recommendations.Index"
+             Title="Search Places">
+
+    <StackLayout>
+        <SearchBar x:Name="SearchQuery"
+                   Placeholder="Enter place to search"
+                   HorizontalOptions="FillAndExpand"/>
+
+        <Button Text="Search"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="OnSearchButtonClicked" />
+
+        <ListView x:Name="resultsListView"
+                  ItemsSource="{Binding SearchResults}"
+                  IsPullToRefreshEnabled="True"
+                  RefreshCommand="{Binding RefreshCommand}"
+                  IsRefreshing="{Binding IsRefreshing}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid HeightRequest="200">
+                            <!-- Set ViewCell height here -->
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- PlaceName -->
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding PlaceName}" FontSize="Medium" TextColor="Black" />
+
+                            <!-- PlaceAddress -->
+                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding PlaceAddress}" FontSize="Small" TextColor="Gray" />
+
+                            <!-- PlacePhone -->
+                            <Label Grid.Row="2" Grid.Column="0" Text="{Binding PlacePhone}" FontSize="Small" TextColor="Gray" />
+
+                            <!-- Place Image -->
+                            <Image Grid.Row="0" Grid.Column="1" Source="{Binding PlaceImageUrl}" HeightRequest="100" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

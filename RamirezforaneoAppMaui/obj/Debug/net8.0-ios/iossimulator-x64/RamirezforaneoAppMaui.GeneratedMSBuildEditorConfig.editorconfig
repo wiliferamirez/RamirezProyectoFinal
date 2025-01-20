@@ -47,3 +47,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RamirezforaneoAppMaui.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/wfram/source/repos/wiliferamirez/RamirezforaneoApp/RamirezforaneoAppMaui/Views/Recommendations/Index.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RamirezforaneoAppMaui.Views.Recommendations.Index.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Recommendations\Index.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Recommendations\Index.xaml

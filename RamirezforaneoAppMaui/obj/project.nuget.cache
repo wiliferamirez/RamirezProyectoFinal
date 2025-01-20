@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "eC2/Rx9BPW4=",
+  "dgSpecHash": "sDUqZQ0VeUE=",
   "success": true,
   "projectFilePath": "C:\\Users\\wfram\\source\\repos\\wiliferamirez\\RamirezforaneoApp\\RamirezforaneoAppMaui\\RamirezforaneoAppMaui.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\wfram\\.nuget\\packages\\google-search-results-dotnet\\2.0.1\\google-search-results-dotnet.2.0.1.nupkg.sha512",
     "C:\\Users\\wfram\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\wfram\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\wfram\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
