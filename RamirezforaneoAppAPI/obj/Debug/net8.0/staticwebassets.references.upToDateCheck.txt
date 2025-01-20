@@ -23,3 +23,5 @@ C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoApp\ob
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoApp\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoApp\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoApp\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoApp\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\wfram\source\repos\wiliferamirez\RamirezforaneoApp\RamirezforaneoApp\obj\Debug\net8.0\staticwebassets.build.json
