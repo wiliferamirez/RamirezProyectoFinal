@@ -732,3 +732,5 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore,dotnetcore,android,androidstudio,java,csharp,windows
+/RamirezforaneoAppMaui/obj/Debug/net8.0-android/designtime/libraryprojectimports.cache
+/RamirezforaneoAppMaui/obj/RamirezforaneoAppMaui.csproj.nuget.dgspec.json
