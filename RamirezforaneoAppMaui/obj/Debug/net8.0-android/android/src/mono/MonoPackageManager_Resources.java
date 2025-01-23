@@ -3,6 +3,7 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "RamirezforaneoAppMaui.dll" comes first in this list. */
 		"RamirezforaneoAppMaui.dll",
+		"CommunityToolkit.Mvvm.dll",
 		"serpapi.dll",
 		"GoogleGson.dll",
 		"Microsoft.Extensions.Configuration.dll",
