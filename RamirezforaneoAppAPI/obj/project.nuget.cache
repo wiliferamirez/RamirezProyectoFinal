@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vjo0y5sUnCg=",
+  "dgSpecHash": "UfLsoQs78bQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\wfram\\source\\repos\\wiliferamirez\\RamirezforaneoApp\\RamirezforaneoAppAPI\\RamirezforaneoAppAPI.csproj",
+  "projectFilePath": "C:\\Users\\wfram\\OneDrive\\Escritorio\\ProyectoFinal\\RamirezforaneoAppAPI\\RamirezforaneoAppAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wfram\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\wfram\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

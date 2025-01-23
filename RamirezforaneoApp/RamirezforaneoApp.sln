@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RamirezforaneoApp", "Ramire
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RamirezforaneoAppAPI", "..\RamirezforaneoAppAPI\RamirezforaneoAppAPI.csproj", "{E9A80614-B723-452B-A4C7-978729D88873}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RamirezforaneoAppMaui", "..\RamirezforaneoAppMaui\RamirezforaneoAppMaui.csproj", "{C2BEBBA9-D88B-4F5A-BACD-7D2BE07E86A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{E9A80614-B723-452B-A4C7-978729D88873}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9A80614-B723-452B-A4C7-978729D88873}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9A80614-B723-452B-A4C7-978729D88873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2BEBBA9-D88B-4F5A-BACD-7D2BE07E86A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2BEBBA9-D88B-4F5A-BACD-7D2BE07E86A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2BEBBA9-D88B-4F5A-BACD-7D2BE07E86A7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C2BEBBA9-D88B-4F5A-BACD-7D2BE07E86A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2BEBBA9-D88B-4F5A-BACD-7D2BE07E86A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2BEBBA9-D88B-4F5A-BACD-7D2BE07E86A7}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
