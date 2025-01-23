@@ -1,24 +1,27 @@
-﻿
+﻿using Newtonsoft.Json.Linq;
+using SerpApi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RamirezforaneoAppMaui.Models;
+using System.Collections;
 
 namespace RamirezforaneoAppMaui.Services
 {
-    public class GoogleSearch
+    public class GoogleSearchService
     {
         private readonly string _apiKey;
 
-        public GoogleSearch(string apiKey)
+        public GoogleSearchService(string apiKey)
         {
             _apiKey = apiKey;
         }
 
-        public List<SearchResult> WRSearchNearbyPlaces(string query, string location)
+        public List<PlaceResult> SearchNearbyPlaces(string query, string location)
         {
-            var results = new List<SearchResult>();
+            var results = new List<PlaceResult>();
 
             Hashtable ht = new Hashtable
             {
@@ -38,12 +41,12 @@ namespace RamirezforaneoAppMaui.Services
                 {
                     foreach (var result in localResults)
                     {
-                        results.Add(new SearchResult
+                        results.Add(new PlaceResult
                         {
-                            WRPlaceName = result["title"]?.ToString(),
-                            WRPlaceAddress = result["address"]?.ToString(),
-                            WRPlacePhone = result["phone"]?.ToString(),
-                            WRPlaceImageUrl = result["thumbnail"]?.ToString()
+                            PlaceName = result["title"]?.ToString(),
+                            PlaceAddress = result["address"]?.ToString(),
+                            PlacePhone = result["phone"]?.ToString(),
+                            PlaceImageUrl = result["thumbnail"]?.ToString()
                         });
                     }
                 }
