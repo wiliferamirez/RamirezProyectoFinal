@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RamirezforaneoAppMaui.Views.Admin.Login"
+             Title="Login">
+    <Grid RowDefinitions=".30*, .70*">
+        <Image Aspect="AspectFill" Source="students.jpg"/>
+        <Grid BackgroundColor="#303030" Opacity=".7"/>
+        <Grid ColumnDefinitions="*">
+            <Image Aspect="AspectFit"
+                   HeightRequest="100"
+                   Source="logoapp.webp"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5, -30, -5, -2"
+                            CornerRadius="30, 30, 0, 0"
+                            Fill="White"/>
+            <VerticalStackLayout Margin="30 , 0, 30, 0">
+                <Label FontAttributes="Bold"
+                       FontFamily="bold"
+                       FontSize="Medium"
+                       Text="Welcome!"
+                       TextColor="#2D2D2D"/>
+                <Label FontFamily="medium"
+                       Text="Login to Continue"
+                       TextColor="#A3A3A4"/>
+                <Grid Margin="0, 30, 0,0" ColumnDefinitions=".2*, .8*">
+                    <RoundRectangle BackgroundColor="#373737"
+                                    CornerRadius="10"
+                                    HeightRequest="60"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="60"/>
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="Awesome"
+                                Glyph="&#xf0e0;"
+                                Size="44"
+                                Color="white"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry x:Name="EmailEntryLogin" 
+                           TextColor="Black"
+                           Grid.Column="1"
+                           Placeholder="Email"
+                           Text="user@udla.edu.ec"
+                           VerticalOptions="Center"/>
+                </Grid>
+
+                <Grid Margin="0, 30, 0,0" ColumnDefinitions=".2*, .8*">
+                    <RoundRectangle BackgroundColor="#373737"
+                                    CornerRadius="10"
+                                    HeightRequest="60"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="60"/>
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="Awesome"
+                                Glyph="&#xf084;"
+                                Size="44"
+                                Color="white"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry x:Name="PasswordEntryLogin" 
+                           TextColor="Black"
+                           Grid.Column="1"
+                           Placeholder="Password"
+                           IsPassword ="True"
+                           Text="12345"
+                           VerticalOptions="Center"/>
+                </Grid>
+
+                <Button Margin="0, 20, 0, 0"
+                        BackgroundColor="#373737"
+                        HeightRequest="60"
+                        Text="Login"
+                        TextColor="White"
+                        Clicked="OnLoginClicked"/>
+
+                <Button x:Name="RegisterButtonLogin"
+                        Margin="0, 30, 0, 0"
+                        BackgroundColor="#ababab"
+                        HeightRequest="60"
+                        Text="Create an Account"
+                        TextColor="white"
+                        Clicked="OnRegisterClicked"/>
+
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
