@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:Views.GoogleResults.Index}"
+        ContentTemplate="{DataTemplate local:Views.Identity.Login}"
         Route="MainPage" />
 
 </Shell>
