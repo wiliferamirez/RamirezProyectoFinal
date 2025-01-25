@@ -24,21 +24,11 @@ namespace RamirezforaneoAppMaui.Services
             return await response.Content.ReadFromJsonAsync<LoginResponse>();
 
         }
-        public async Task<bool> RegisterAsync(RegisterRequest registerModel)
+        public async Task<bool> RegisterAsync(Register registerModel)
         {
             var response = await _httpClient.PostAsJsonAsync("api/UserManagement/register", registerModel);
             return response.IsSuccessStatusCode;
         }
-    }
-
-    public class RegisterRequest
-    {
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string CedulaUser { get; set; }
-        public string StateName { get; set; }
-        public string StudyProgram { get; set; }
-        public int SessionNumber { get; set; }
     }
 
     public class LoginResponse

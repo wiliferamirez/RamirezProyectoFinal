@@ -19,7 +19,8 @@ namespace RamirezforaneoAppMaui
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-
+            builder.Services.AddTransient<RegisterViewModel>();
+            builder.Services.AddTransient<Register>();
             builder.Services.AddTransient<Login>(); 
             builder.Services.AddTransient<LoginViewModel>();
 

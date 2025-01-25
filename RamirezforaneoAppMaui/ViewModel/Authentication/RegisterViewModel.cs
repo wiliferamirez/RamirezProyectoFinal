@@ -3,11 +3,9 @@ using CommunityToolkit.Mvvm.Input;
 using RamirezforaneoAppMaui.Services;
 using System.Net.Http.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using RamirezforaneoAppMaui.Models.Authentication;
 
 namespace RamirezforaneoAppMaui.ViewModel.Authentication
 {
@@ -44,34 +42,31 @@ namespace RamirezforaneoAppMaui.ViewModel.Authentication
         [RelayCommand]
         public async Task RegisterAsync()
         {
-            if (IsRegistering) return;
-
-            IsRegistering = true;
-
-            var registerModel = new RegisterRequest
+            if (string.IsNullOrWhiteSpace(CedulaUser) || string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(StateName) || string.IsNullOrWhiteSpace(StudyProgram) || SessionNumber <= 0 || string.IsNullOrWhiteSpace(Password))
             {
-                Email = Email,
-                Password = Password,
+                await Shell.Current.DisplayAlert("Error", "Please fill all fields", "OK");
+                return;
+            }
+            IsRegistering = true;
+            var registerModel = new Register
+            {
                 CedulaUser = CedulaUser,
+                Email = Email,
                 StateName = StateName,
                 StudyProgram = StudyProgram,
-                SessionNumber = SessionNumber
+                SessionNumber = SessionNumber,
+                Password = Password
             };
-
             var success = await _authenticationService.RegisterAsync(registerModel);
-
-            IsRegistering = false;
-
             if (success)
             {
-                // Handle successful registration (e.g., navigate to login)
-                await App.Current.MainPage.DisplayAlert("Success", "Registration complete!", "OK");
+                await App.Current.MainPage.DisplayAlert("Success", "Registration successful!", "OK");
             }
             else
             {
-                // Handle registration failure
-                await App.Current.MainPage.DisplayAlert("Error", "Registration failed. Try again.", "OK");
+                await App.Current.MainPage.DisplayAlert("Error", "Registration failed. Please try again.", "OK");
             }
+            IsRegistering = false;
         }
     }
 }
