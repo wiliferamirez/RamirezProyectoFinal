@@ -14,7 +14,7 @@ namespace RamirezforaneoAppMaui.Services
         public AuthenticationService()
         {
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:7242/");
+            _httpClient.BaseAddress = new Uri("https://rh4p8xrf-5262.use2.devtunnels.ms/");
         }
 
         public async Task<LoginResponse> LoginAsync(string email, string password)

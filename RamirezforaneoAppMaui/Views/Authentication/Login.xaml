@@ -8,8 +8,8 @@
     <ContentPage.BindingContext>
         <vm:LoginViewModel />
     </ContentPage.BindingContext>
-    
-    <Grid RowDefinitions=".30*, .70*">
+    <VerticalStackLayout>
+        <Grid RowDefinitions=".30*, .70*">
         <Image Aspect="AspectFill" Source="students.jpg"/>
         <Grid BackgroundColor="#303030" Opacity=".7"/>
         <Grid ColumnDefinitions="*">
@@ -95,4 +95,5 @@
             </VerticalStackLayout>
         </Grid>
     </Grid>
+    </VerticalStackLayout>
 </ContentPage>

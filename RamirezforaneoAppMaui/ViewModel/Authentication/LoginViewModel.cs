@@ -25,7 +25,7 @@ namespace RamirezforaneoAppMaui.ViewModel.Authentication
         {
             _httpClient = new HttpClient
             {
-                BaseAddress = new Uri("https://localhost:7242/")
+                BaseAddress = new Uri("https://rh4p8xrf-5262.use2.devtunnels.ms/")
             };
         }
 
