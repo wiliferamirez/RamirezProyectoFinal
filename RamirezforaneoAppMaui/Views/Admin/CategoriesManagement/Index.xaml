@@ -10,15 +10,26 @@
         </Grid>
         <Grid Grid.Row="1">
             <RoundRectangle Margin="-5, -30, -5, -2"
-                    CornerRadius="30, 30, 0, 0"
-                    Fill="White"/>
-            <Label FontAttributes="Bold"
+                        CornerRadius="30, 30, 0, 0"
+                        Fill="White"/>
+            <VerticalStackLayout Margin="30, 0, 30, 0">
+                <Image Aspect="AspectFit"
+               HeightRequest="30"
+               Source="logoapp.webp"/>
+                <Label FontAttributes="Bold"
                    FontFamily="bold"
                    FontSize="Medium"
-                   Text="Manage Categories"
+                   Text="Categories"
                    HorizontalTextAlignment="Center"
                    TextColor="#2D2D2D"/>
+                <Label FontFamily="medium"
+                   Text="All Categories"
+                   TextColor="#A3A3A4"
+                   HorizontalOptions="Center"/>
 
+                
+
+            </VerticalStackLayout>
         </Grid>
     </Grid>
 </ContentPage>
