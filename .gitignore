@@ -836,3 +836,5 @@ fabric.properties
 /RamirezforaneoAppAPI/bin/Debug/net8.0/RamirezforaneoAppAPI.dll
 /RamirezforaneoAppAPI/bin/Debug/net8.0/RamirezforaneoAppAPI.exe
 /RamirezforaneoAppAPI/bin/Debug/net8.0/RamirezforaneoAppAPI.pdb
+/RamirezforaneoAppMaui/obj/project.assets.json
+/RamirezforaneoAppMaui/obj/RamirezforaneoAppMaui.csproj.nuget.g.targets
