@@ -10,6 +10,9 @@
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:Views.Authentication.Login}"
-        Route="MainPage" />
+        Route="HomePage" />
+    
+    <ShellContent Title="Main" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+    
 
 </Shell>

@@ -7,66 +7,55 @@ using System;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Text;
+using System.Net.Http.Json;
 
 namespace RamirezforaneoAppMaui.ViewModel.Authentication
 {
     public partial class LoginViewModel : ObservableObject
     {
-        private readonly AuthenticationService _authenticationService;
+        private readonly HttpClient _httpClient;
 
-        // Constructor
-        public LoginViewModel(AuthenticationService authenticationService)
-        {
-            _authenticationService = authenticationService;
-        }
-
-        public LoginViewModel() : this(new AuthenticationService(new HttpClient()))
-        {
-        }
-
-        // Observable properties for binding
         [ObservableProperty]
         private string _email;
 
         [ObservableProperty]
         private string _password;
 
-        // Async command to handle login
-        public IAsyncRelayCommand LoginCommand => new AsyncRelayCommand(LoginAsync);
-
-        // Async login logic
-        public async Task LoginAsync()
+        public LoginViewModel()
         {
-            if (string.IsNullOrEmpty(_email) || string.IsNullOrEmpty(_password))
+            _httpClient = new HttpClient
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Please fill in both email and password", "OK");
+                BaseAddress = new Uri("https://localhost:7242/")
+            };
+        }
+
+        [RelayCommand]
+        private async Task LoginAsync()
+        {
+            if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
+            {
+                await Shell.Current.DisplayAlert("Error", "Please enter email and password", "OK");
                 return;
             }
 
-            var loginModel = new Login
-            {
-                Username = _email,
-                Password = _password
-            };
-
             try
             {
-                var response = await _authenticationService.LoginAsync(loginModel);
+                var loginModel = new { Email, Password };
+                var response = await _httpClient.PostAsJsonAsync("api/UserManagement/login", loginModel);
 
-                // Check if the response is successful
                 if (response.IsSuccessStatusCode)
                 {
-                    await Shell.Current.GoToAsync(nameof(MainPage));  // Navigate to main page
+                    var loginResponse = await response.Content.ReadFromJsonAsync<LoginResponse>();
+                    await Shell.Current.GoToAsync("///MainPage");
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Invalid login attempt", "OK");
+                    await Shell.Current.DisplayAlert("Login Failed", "Invalid credentials", "OK");
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                // If there’s an error connecting, display a basic message
-                await Application.Current.MainPage.DisplayAlert("Error", "Error connecting to the server", "OK");
+                await Shell.Current.DisplayAlert("Error", $"Connection error: {ex.Message}", "OK");
             }
         }
     }

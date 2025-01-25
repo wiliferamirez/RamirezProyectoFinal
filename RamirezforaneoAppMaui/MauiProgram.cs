@@ -19,11 +19,7 @@ namespace RamirezforaneoAppMaui
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            builder.Services.AddSingleton<AuthenticationService>(provider =>
-            new AuthenticationService(new HttpClient
-        {
-            BaseAddress = new Uri("https://localhost:7242/")
-        }));
+
             builder.Services.AddTransient<Login>(); 
             builder.Services.AddTransient<LoginViewModel>();
 

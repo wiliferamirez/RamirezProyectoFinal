@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Http.Json;
 
 namespace RamirezforaneoAppMaui.Services
 {
@@ -10,18 +11,23 @@ namespace RamirezforaneoAppMaui.Services
     {
         private readonly HttpClient _httpClient;
 
-        public AuthenticationService(HttpClient httpClient)
+        public AuthenticationService()
         {
-            _httpClient = httpClient;
+            _httpClient = new HttpClient();
+            _httpClient.BaseAddress = new Uri("https://localhost:7242/");
         }
 
-        public async Task<HttpResponseMessage> LoginAsync(Login loginModel)
+        public async Task<LoginResponse> LoginAsync(string email, string password)
         {
-            var content = new StringContent(JsonConvert.SerializeObject(loginModel), Encoding.UTF8, "application/json");
+            var loginModel = new { Email = email, Password = password };
+            var response = await _httpClient.PostAsJsonAsync("api/UserManagement/login", loginModel);
+            return await response.Content.ReadFromJsonAsync<LoginResponse>();
 
-            var response = await _httpClient.PostAsync("https://localhost:7242/api/UserManagement/login", content);
-
-            return response;
         }
+    }
+    public class LoginResponse
+    {
+        public string UserId { get; set; }
+        public string Email { get; set; }
     }
 }
