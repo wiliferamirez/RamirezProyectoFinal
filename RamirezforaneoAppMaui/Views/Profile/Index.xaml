@@ -89,7 +89,7 @@
                     TextColor="white"
                     Clicked="OnSaveButtonClicked"/>
                 
-                <Button x:Name="RegisterButtonLogin"
+                <Button x:Name="BackButton"
                         Margin="10, 5, 10, 10"
                         BackgroundColor="#ababab"
                         HeightRequest="60"

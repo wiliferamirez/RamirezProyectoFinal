@@ -6,4 +6,14 @@ public partial class ChangePassword : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void OnLoginClicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void OnRegisterClicked(object sender, EventArgs e)
+    {
+
+    }
 }

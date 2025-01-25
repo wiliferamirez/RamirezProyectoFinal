@@ -89,7 +89,8 @@
                         Margin="10, 5, 10, 10"
                         VerticalOptions="Center"/>
 
-                <Button Text="Register" 
+                <Button x:Name="RegisterButton"
+                        Text="Register" 
                         BackgroundColor="#373737"
                         Margin="10, 5, 10, 10"
                         HeightRequest="60"
