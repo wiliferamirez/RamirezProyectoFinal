@@ -1,4 +1,4 @@
-namespace RamirezforaneoAppMaui.Views.Identity;
+namespace RamirezforaneoAppMaui.Views.Authentication;
 
 public partial class Login : ContentPage
 {
