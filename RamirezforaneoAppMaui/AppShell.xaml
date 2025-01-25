@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:Views.Profile.ChangePassword}"
+        ContentTemplate="{DataTemplate local:Views.Admin.CategoriesManagement}"
         Route="MainPage" />
 
 </Shell>

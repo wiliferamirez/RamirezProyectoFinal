@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RamirezforaneoAppMaui.Views.Admin.CategoriesManagement"
+             Title="CategoriesManagement">
+    <Grid RowDefinitions=".1*, .9*">
+        <Image Aspect="AspectFill" Source="students.jpg"/>
+        <Grid BackgroundColor="#303030" Opacity=".7"/>
+        <Grid ColumnDefinitions="*">
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5, -30, -5, -2"
+                    CornerRadius="30, 30, 0, 0"
+                    Fill="White"/>
+            
+            
+        </Grid>
+    </Grid>
+</ContentPage>
