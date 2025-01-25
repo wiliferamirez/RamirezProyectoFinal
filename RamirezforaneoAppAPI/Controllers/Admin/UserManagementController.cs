@@ -35,7 +35,7 @@ namespace RamirezforaneoAppAPI.Controllers.Admin
         }
 
         // GET: api/Users
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetUsers()
         {
@@ -95,14 +95,15 @@ namespace RamirezforaneoAppAPI.Controllers.Admin
 
         private async Task<string> GenerateJwtToken(User user)
         {
-            var claims = new[]
-            {
+            var roles = await _userManager.GetRolesAsync(user);
+            var claims = new List<Claim>
+    {
         new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-        new Claim(ClaimTypes.NameIdentifier, user.Id),
-
-        new Claim(ClaimTypes.Role, "Admin"), 
+        new Claim(ClaimTypes.NameIdentifier, user.Id)
     };
+
+            claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -111,7 +112,7 @@ namespace RamirezforaneoAppAPI.Controllers.Admin
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddDays(1), 
+                expires: DateTime.Now.AddDays(1),
                 signingCredentials: creds
             );
 
