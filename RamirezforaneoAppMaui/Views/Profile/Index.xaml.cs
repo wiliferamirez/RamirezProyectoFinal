@@ -6,4 +6,15 @@ public partial class Index : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void OnBackButtonClicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void OnSaveButtonClicked(object sender, EventArgs e)
+    {
+
+    }
+
 }

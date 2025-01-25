@@ -3,27 +3,101 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RamirezforaneoAppMaui.Views.Profile.Index"
              Title="Index">
-    <VerticalStackLayout Padding="20" Spacing="15">
+    <Grid RowDefinitions=".1*, .9*">
+        <Image Aspect="AspectFill" Source="students.jpg"/>
+        <Grid BackgroundColor="#303030" Opacity=".7"/>
+        <Grid ColumnDefinitions="*">
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5, -30, -5, -2"
+                        CornerRadius="30, 30, 0, 0"
+                        Fill="White"/>
+            <VerticalStackLayout Margin="30, 0, 30, 0">
+                <Image Aspect="AspectFit"
+               HeightRequest="30"
+               Source="logoapp.webp"/>
+                <Label FontAttributes="Bold"
+                   FontFamily="bold"
+                   FontSize="Medium"
+                   Text="Manage your Account"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#2D2D2D"/>
+                <Label FontFamily="medium"
+                   Text="Personal Info"
+                   TextColor="#A3A3A4"
+                   HorizontalOptions="Center"/>
 
-        <Button Text="Back"
-                HorizontalOptions="Start"
-                Clicked="OnBackButtonClicked"/>
+                <Entry x:Name="CedulaEntry"
+                   TextColor="Black"
+                   Placeholder="Cedula"
+                   Margin="10, 50, 10, 10"
+                   VerticalOptions="Center"/>
 
-        <Label Text="Cedula:" FontAttributes="Bold"/>
-        <Entry x:Name="CedulaEntry" Placeholder="Enter your Cedula" Text="1234567890"/>
+                <Entry x:Name="EmailEntry"
+                   TextColor="Black"
+                   Placeholder="Email Udla"
+                  Margin="10, 5, 10, 10"
+                  VerticalOptions="Center"/>
 
-        <Label Text="Username:" FontAttributes="Bold"/>
-        <Entry x:Name="UsernameEntry" Placeholder="Enter your Username" Text="john_doe"/>
+                <Picker x:Name="statePicker"
+                    Title="Select the state you live in"
+                    Margin="10, 5, 10, 10"
+                    TitleColor="#2D2D2D">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Imbabura</x:String>
+                            <x:String>Pichincha</x:String>
+                            <x:String>Azuay</x:String>
+                            <x:String>Carchi</x:String>
+                            <x:String>Chimborazo</x:String>
+                            <x:String>Cotopaxi</x:String>
+                            <x:String>Guayas</x:String>
+                            <x:String>Manabi</x:String>
+                            <x:String>Esmeraldas</x:String>
+                            <x:String>Loja</x:String>
+                            <x:String>Sto.Domingo</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
 
-        <Label Text="Study Program:" FontAttributes="Bold"/>
-        <Entry x:Name="StudyProgramEntry" Placeholder="Enter your Study Program" Text="Computer Science"/>
+                <Picker x:Name="programPicker"
+                    Title="Select your Program"
+                    Margin="10, 5, 10, 10"
+                    TextColor="#2D2D2D">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Software</x:String>
+                            <x:String>Ciberseguridad</x:String>
+                            <x:String>Inteligencia Artificial</x:String>
+                            <x:String>Administracion de Empresa</x:String>
+                            <x:String>Psicologia</x:String>
+                            <x:String>Negocios Internacionales</x:String>
+                            <x:String>Medicina</x:String>
+                            <x:String>Odontologia</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
 
-        <Label Text="Session Number:" FontAttributes="Bold"/>
-        <Entry x:Name="SessionNumberEntry" Placeholder="Enter your Session Number" Keyboard="Numeric" Text="3"/>
+                <DatePicker x:Name="BirthdayPickerRegister"
+                        TextColor="Black"
+                        Margin="10, 5, 10, 10"/>
 
-        <Label Text="State Name:" FontAttributes="Bold"/>
-        <Entry x:Name="StateNameEntry" Placeholder="Enter your State Name" Text="Active"/>
+                <Button Text="Save" 
+                    BackgroundColor="#373737"
+                    Margin="10, 5, 10, 10"
+                    HeightRequest="60"
+                    TextColor="white"
+                    Clicked="OnSaveButtonClicked"/>
+                
+                <Button x:Name="RegisterButtonLogin"
+                        Margin="10, 5, 10, 10"
+                        BackgroundColor="#ababab"
+                        HeightRequest="60"
+                        Text="Back"
+                        TextColor="white"
+                        Clicked="OnBackButtonClicked"/>
 
-        <Button Text="Save" HorizontalOptions="Fill" Clicked="OnSaveButtonClicked"/>
-    </VerticalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
 </ContentPage>
