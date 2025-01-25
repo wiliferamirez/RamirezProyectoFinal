@@ -1,31 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using RamirezforaneoAppMaui.Models.Authentication;
+using Newtonsoft.Json;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Net.Http.Json;
-using RamirezforaneoAppMaui.Models.Authentication;
 
 namespace RamirezforaneoAppMaui.Services
 {
     public class AuthenticationService
     {
         private readonly HttpClient _httpClient;
+
         public AuthenticationService(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
-        public async Task<string> LoginAsync(Login loginModel)
+
+        public async Task<HttpResponseMessage> LoginAsync(Login loginModel)
         {
-            var response = await _httpClient.PostAsJsonAsync("api/Usermanagment/login", loginModel);
+            var content = new StringContent(JsonConvert.SerializeObject(loginModel), Encoding.UTF8, "application/json");
 
-            if (response.IsSuccessStatusCode)
-            {
-                return await response.Content.ReadAsStringAsync();
-            }
+            var response = await _httpClient.PostAsync("https://localhost:7242/api/UserManagement/login", content);
 
-            throw new Exception("Invalid login credentials."); 
+            return response;
         }
-
     }
 }
