@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RamirezforaneoAppMaui.Views.Profile.Index"
+             Title="Index">
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Button Text="Back"
+                HorizontalOptions="Start"
+                Clicked="OnBackButtonClicked"/>
+
+        <Label Text="Cedula:" FontAttributes="Bold"/>
+        <Entry x:Name="CedulaEntry" Placeholder="Enter your Cedula" Text="1234567890"/>
+
+        <Label Text="Username:" FontAttributes="Bold"/>
+        <Entry x:Name="UsernameEntry" Placeholder="Enter your Username" Text="john_doe"/>
+
+        <Label Text="Study Program:" FontAttributes="Bold"/>
+        <Entry x:Name="StudyProgramEntry" Placeholder="Enter your Study Program" Text="Computer Science"/>
+
+        <Label Text="Session Number:" FontAttributes="Bold"/>
+        <Entry x:Name="SessionNumberEntry" Placeholder="Enter your Session Number" Keyboard="Numeric" Text="3"/>
+
+        <Label Text="State Name:" FontAttributes="Bold"/>
+        <Entry x:Name="StateNameEntry" Placeholder="Enter your State Name" Text="Active"/>
+
+        <Button Text="Save" HorizontalOptions="Fill" Clicked="OnSaveButtonClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
