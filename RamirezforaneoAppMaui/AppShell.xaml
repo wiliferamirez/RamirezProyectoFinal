@@ -8,10 +8,15 @@
     Title="RamirezforaneoAppMaui">
 
     <ShellContent
-        Title="Home"
+        Title="LoginPage"
         ContentTemplate="{DataTemplate local:Views.Authentication.Login}"
-        Route="HomePage" />
-    
+        Route="LoginPage" />
+
+    <ShellContent
+        Title="RegisterPage"
+        ContentTemplate="{DataTemplate local:Views.Authentication.Register}"
+        Route="RegisterPage" />
+
     <ShellContent Title="Main" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
     
 

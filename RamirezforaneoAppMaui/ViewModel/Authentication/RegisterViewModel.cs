@@ -61,6 +61,7 @@ namespace RamirezforaneoAppMaui.ViewModel.Authentication
             if (success)
             {
                 await App.Current.MainPage.DisplayAlert("Success", "Registration successful!", "OK");
+                await Shell.Current.GoToAsync("///MainPage");
             }
             else
             {
