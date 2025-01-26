@@ -21,7 +21,7 @@ public partial class Index : ContentPage
                 viewModel.SelectedCategory = selectedCategory; 
             }
 
-            await Shell.Current.GoToAsync(nameof(ActionsPage));
+            await Shell.Current.GoToAsync("///ActionsCategoriesPage");
         }
 
             ((ListView)sender).SelectedItem = null;

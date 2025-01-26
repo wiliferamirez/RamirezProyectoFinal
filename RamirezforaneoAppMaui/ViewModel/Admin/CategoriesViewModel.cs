@@ -39,7 +39,9 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
             if (selectedCategory != null)
             {
                 SelectedCategory = selectedCategory;
-                await Shell.Current.GoToAsync("///ActionsCategoriesPage");
+
+                var route = $"///ActionsCategoriesPage?CategoryId={selectedCategory.CategoryId}";
+                await Shell.Current.GoToAsync(route);
             }
         }
 

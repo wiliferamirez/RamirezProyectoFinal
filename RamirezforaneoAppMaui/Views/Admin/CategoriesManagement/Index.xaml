@@ -46,21 +46,19 @@
                             BackgroundColor="#FF5722"
                             TextColor="White" />
 
-                    <ListView ItemsSource="{Binding Categories}"
-                              SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
-                              SelectionMode="Single"
-                              ItemTapped="OnCategoryTapped">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <ViewCell>
-                                        <Frame Padding="20"
-                                               Margin="5, 10, 5, 0">
-                                        <Label Text="{Binding CategoryName}" />
-                                    </Frame>
-                                </ViewCell>
+                    <CollectionView ItemsSource="{Binding Categories}"
+                                    SelectionMode="Single"
+                                    SelectionChangedCommand="{Binding NavigateToActionsPageCommand}"
+                                    SelectionChangedCommandParameter="{Binding SelectedItem}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Padding="20"
+                                       Margin="5, 10, 5, 0">
+                                    <Label Text="{Binding CategoryName}" />
+                                </Frame>
                             </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </StackLayout>
             </VerticalStackLayout>
         </Grid>
