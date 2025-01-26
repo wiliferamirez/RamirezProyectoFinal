@@ -16,6 +16,11 @@
         Title="RegisterPage"
         ContentTemplate="{DataTemplate local:Views.Authentication.Register}"
         Route="RegisterPage" />
+    
+    <ShellContent
+    Title="IndexCategoryPage"
+    ContentTemplate="{DataTemplate local:Views.Admin.CategoriesManagement.Index}"
+    Route="IndexCategoryPage" />
 
     <ShellContent Title="Main" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
     
