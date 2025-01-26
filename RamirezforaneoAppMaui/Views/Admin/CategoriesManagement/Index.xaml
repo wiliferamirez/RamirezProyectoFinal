@@ -24,7 +24,7 @@
                        Source="logoapp.webp"/>
                 <Label FontAttributes="Bold"
                        FontFamily="bold"
-                       FontSize="Medium"
+                       FontSize="Large"
                        Text="Categories"
                        HorizontalTextAlignment="Center"
                        TextColor="#2D2D2D"/>
@@ -34,13 +34,17 @@
                        HorizontalOptions="Center"/>
 
                 <StackLayout>
-
-                    <Button Text="Load Categories" Command="{Binding LoadCategoriesCommand}" />
+                    <Button Text="Show Categories" 
+                            Command="{Binding LoadCategoriesCommand}"
+                            Margin="5, 25, 5, 20"
+                            HeightRequest="60"
+                            BackgroundColor="Black"/>
 
                     <CollectionView ItemsSource="{Binding Categories}">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Frame Padding="10">
+                                <Frame Padding="20"
+                                       Margin="5, 10, 5, 0">
                                     <Label Text="{Binding CategoryName}" />
                                 </Frame>
                             </DataTemplate>
