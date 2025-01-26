@@ -10,6 +10,9 @@
     <ShellContent 
         Route="IndexEventsPage" 
         ContentTemplate="{DataTemplate local:Views.Admin.EventsManagement.Index}" />
+    <ShellContent 
+        Route="CreateEventPage" 
+        ContentTemplate="{DataTemplate local:Views.Admin.EventsManagement.CreateEvent}" />
 
 
 

@@ -46,5 +46,20 @@ namespace RamirezforaneoAppMaui.Services
                 return false;
             }
         }
+
+        public async Task<List<Category>> GetCategoriesAsync()
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync("api/CategoriesManagement");
+                response.EnsureSuccessStatusCode();
+
+                return await response.Content.ReadFromJsonAsync<List<Category>>() ?? new List<Category>();
+            }
+            catch (Exception ex)
+            {
+                return new List<Category>();
+            }
+        }
     }
 }

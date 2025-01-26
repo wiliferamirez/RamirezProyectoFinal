@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RamirezforaneoAppMaui.ViewModel.Admin"
+             x:Class="RamirezforaneoAppMaui.Views.Admin.EventsManagement.CreateEvent">
+    <ContentPage.BindingContext>
+        <local:EventsViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions=".1*, .9*">
+        <Image Aspect="AspectFill" Source="students.jpg"/>
+        <Grid BackgroundColor="#303030" Opacity=".7"/>
+        <Grid ColumnDefinitions="*">
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5, -30, -5, -2"
+                CornerRadius="30, 30, 0, 0"
+                Fill="White"/>
+            <VerticalStackLayout Margin="30, 0, 30, 0">
+                <Image Aspect="AspectFit"
+               HeightRequest="30"
+               Source="logoapp.webp"/>
+                <Label FontAttributes="Bold"
+                       Margin="0, -30, 0, 0"
+                       FontFamily="bold"
+                       FontSize="Large"
+                       Text="Events"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#2D2D2D"/>
+                <Label FontFamily="medium"
+               Text="Create Event"
+               TextColor="#A3A3A4"
+               HorizontalOptions="Center"/>
+                <VerticalStackLayout Padding="20" Spacing="15">
+
+                    <Entry Placeholder="Event Title"
+                       Text="{Binding NewEventTitle}"
+                       Margin="10, 5, 10, 10"
+                       ClearButtonVisibility="WhileEditing" />
+                    
+                    <Entry Placeholder="Event Description"
+                       Text="{Binding NewEventDescription}"
+                       Margin="10, 5, 10, 10"
+                       ClearButtonVisibility="WhileEditing" />
+                    <Entry Placeholder="Event Description"
+                       Text="{Binding NewEventDescription}"
+                       Margin="10, 5, 10, 10"
+                       ClearButtonVisibility="WhileEditing" />
+                    <Picker ItemsSource="{Binding Categories}"
+                            ItemDisplayBinding="{Binding CategoryName}"
+                            SelectedItem="{Binding SelectedCategory}"
+                            Title="Choose a Category"
+                            Margin="10, 5, 10, 10"
+                            TitleColor="#2D2D2D">
+                    </Picker>
+                    <Entry Placeholder="Event Location"
+                           Margin="10, 5, 10, 10"
+                           Text="{Binding NewEventLocation}"
+                           ClearButtonVisibility="WhileEditing" />
+
+                    <DatePicker Date="{Binding EventStartDate}"
+                        Format="D"
+                        Margin="10, 5, 10, 10"
+                        TextColor="#2D2D2D"/>
+
+                    <DatePicker Date="{Binding EventEndDate}"
+                        Format="D"
+                        Margin="10, 5, 10, 10"
+                        TextColor="#2D2D2D"/>
+
+                        <Button Text="Add New Event"
+                        Command="{Binding CreateEventCommand}"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        FontAttributes="Bold" />
+
+                    <Button Text="Cancel"
+                        Command="{Binding CancelCreateEventCommand}"
+                        BackgroundColor="#2D2D2D"
+                        TextColor="White"
+                        FontAttributes="Bold" />
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -75,6 +75,9 @@
 	  <MauiXaml Update="Views\Admin\CategoriesManagement\Index.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Admin\EventsManagement\CreateEvent.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Admin\EventsManagement\Index.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

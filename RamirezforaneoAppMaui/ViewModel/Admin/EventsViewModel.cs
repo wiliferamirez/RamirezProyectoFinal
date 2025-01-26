@@ -3,7 +3,6 @@ using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using RamirezforaneoAppMaui.Services;
 using RamirezforaneoAppMaui.Models.Admin;
-using System.Threading.Tasks;
 
 
 namespace RamirezforaneoAppMaui.ViewModel.Admin
@@ -11,6 +10,9 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
     public partial class EventsViewModel : ObservableObject
     {
         private readonly EventsService _eventsService;
+
+        [ObservableProperty]
+        private ObservableCollection<Category> categories;
 
         [ObservableProperty]
         private ObservableCollection<Event> events;
@@ -33,15 +35,35 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
         [ObservableProperty]
         private DateTime eventEndDate;
 
+        [ObservableProperty]
+        private Category selectedCategory;
+
+
 
         public EventsViewModel()
         {
-
             _eventsService = new EventsService();
             Events = new ObservableCollection<Event>();
+            Categories = new ObservableCollection<Category>();
+            LoadCategoriesAsync();
         }
 
-        // Command to load events
+
+        [RelayCommand]
+        private async Task LoadCategoriesAsync()
+        {
+            try
+            {
+                var categoryList = await _eventsService.GetCategoriesAsync();
+                Categories = new ObservableCollection<Category>(categoryList);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading categories: {ex.Message}");
+            }
+        }
+
+
         [RelayCommand]
         public async Task LoadEventsAsync()
         {
@@ -49,7 +71,17 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
             Events = new ObservableCollection<Event>(eventsList);
         }
 
-        // Command to create a new event
+        [RelayCommand]
+        private async Task NavigateToCreateEventAsync()
+        {
+            await Shell.Current.GoToAsync("///CreateEventPage");
+        }
+        [RelayCommand]
+        private async Task CancelCreateEventAsync()
+        {
+            await Shell.Current.GoToAsync("///IndexEventsPage");
+        }
+
         [RelayCommand]
         public async Task CreateEventAsync()
         {
@@ -63,7 +95,7 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
                 {
                     EventTitle = newEventTitle,
                     EventDescription = newEventDescription,
-                    CategoryId = selectedCategoryId,  // Assuming category is selected
+                    CategoryId = selectedCategoryId,
                     EventLocation = newEventLocation,
                     EventStartDate = eventStartDate,
                     EventEndDate = eventEndDate

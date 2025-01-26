@@ -36,12 +36,16 @@
                         Margin="5, 25, 5, 20"
                         HeightRequest="35"
                         BackgroundColor="Black"/>
-                    
+                    <Button Text="Add New Event"
+                            Command="{Binding NavigateToCreateEventCommand}"
+                            Margin="5, 5, 5, 20"
+                            HeightRequest="35"
+                            BackgroundColor="#373737"
+                            TextColor="White" />
+
 
                     <CollectionView ItemsSource="{Binding Events}"
                                 SelectionMode="Single">
-                        <!--SelectionChangedCommand="{Binding NavigateToActionsPageCommand}"-->
-                        <!--SelectionChangedCommandParameter="{Binding SelectedCategory}">-->
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Frame Padding="15"
@@ -68,11 +72,7 @@
                         </CollectionView.ItemTemplate>
                     </CollectionView>
                     
-                    <Button Text="Create New Event" 
-                            Margin="5, 5, 5, 20"
-                            HeightRequest="35"
-                            BackgroundColor="#373737"
-                            TextColor="White" />
+
                 </StackLayout>
             </VerticalStackLayout>
         </Grid>
