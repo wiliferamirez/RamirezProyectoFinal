@@ -89,13 +89,14 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
                 !string.IsNullOrWhiteSpace(newEventDescription) &&
                 !string.IsNullOrWhiteSpace(newEventLocation) &&
                 eventStartDate != default &&
-                eventEndDate != default)
+                eventEndDate != default &&
+                selectedCategory != null)
             {
                 var newEvent = new Event
                 {
                     EventTitle = newEventTitle,
                     EventDescription = newEventDescription,
-                    CategoryId = selectedCategoryId,
+                    CategoryId = selectedCategory.CategoryId,
                     EventLocation = newEventLocation,
                     EventStartDate = eventStartDate,
                     EventEndDate = eventEndDate
@@ -104,16 +105,17 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
                 var success = await _eventsService.AddEventAsync(newEvent);
                 if (success)
                 {
-                    // Handle success (e.g., navigate back, show success message)
+                    await App.Current.MainPage.DisplayAlert("Success", "Event Created Succesfully", "OK");
+                    await Shell.Current.GoToAsync("///IndexEventsPage");
                 }
                 else
                 {
-                    // Handle failure (e.g., show error message)
+                    await App.Current.MainPage.DisplayAlert("Error", "Failed at creating Event. Please try again.", "OK");
                 }
             }
             else
             {
-                // Handle validation errors (e.g., show validation error messages)
+                await Shell.Current.DisplayAlert("Error", "Please fill all fields", "OK");
             }
         }
     }
