@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http.Json;
+using System.Text;
+using System.Threading.Tasks;
+using RamirezforaneoAppMaui.Models.Admin;
+
+namespace RamirezforaneoAppMaui.Services
+{
+    public class EventsService
+    {
+        private readonly HttpClient _httpClient;
+
+        public EventsService()
+        {
+            _httpClient = new HttpClient();
+            _httpClient.BaseAddress = new Uri("https://rh4p8xrf-5262.use2.devtunnels.ms/");
+        }
+
+        public async Task<List<Event>> GetEventsAsync()
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync("api/EventsManagement");
+                response.EnsureSuccessStatusCode();
+
+                return await response.Content.ReadFromJsonAsync<List<Event>>() ?? new List<Event>();
+            }
+            catch (Exception ex)
+            {
+     
+                return new List<Event>();
+            }
+        }
+        
+        public async Task<bool> AddEventAsync(Event newEvent)
+        {
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync("api/EventsManagement", newEvent);
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+    }
+}
