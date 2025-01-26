@@ -39,8 +39,16 @@
                             Margin="5, 25, 5, 20"
                             HeightRequest="60"
                             BackgroundColor="Black"/>
+                    <Button Text="Create Category" 
+                            Command="{Binding NavigateToCreateCategoryCommand}"
+                            Margin="5, 5, 5, 20"
+                            HeightRequest="50"
+                            BackgroundColor="#FF5722"
+                            TextColor="White" />
 
-                    <CollectionView ItemsSource="{Binding Categories}">
+                    <CollectionView ItemsSource="{Binding Categories}"
+                                    SelectionMode="Single"
+                                    SelectedItem="{Binding SelectedCategory, Mode=TwoWay}">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Frame Padding="20"

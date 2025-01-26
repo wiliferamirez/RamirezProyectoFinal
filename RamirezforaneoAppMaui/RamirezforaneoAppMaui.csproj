@@ -66,6 +66,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Admin\CategoriesManagement\ActionsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Admin\CategoriesManagement\CreateCategory.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Admin\CategoriesManagement\Index.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
