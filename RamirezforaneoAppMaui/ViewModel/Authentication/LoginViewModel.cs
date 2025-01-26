@@ -28,6 +28,11 @@ namespace RamirezforaneoAppMaui.ViewModel.Authentication
                 BaseAddress = new Uri("https://rh4p8xrf-5262.use2.devtunnels.ms/")
             };
         }
+        [RelayCommand]
+        private async Task ToRegisterAsync()
+        {
+            await Shell.Current.GoToAsync("///RegisterPage");
+        }
 
         [RelayCommand]
         private async Task LoginAsync()
