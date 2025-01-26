@@ -15,6 +15,10 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
         private ObservableCollection<Category> categories;
 
         [ObservableProperty]
+        private string newCategoryName;
+
+
+        [ObservableProperty]
         private Category selectedCategory; 
 
         public CategoriesViewModel()
@@ -57,12 +61,36 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
 
 
         [RelayCommand]
-        public async Task AddCategoryAsync(Category newCategory)
+        private async Task CreateCategoryAsync()
         {
-            if (await _categoriesService.AddCategoryAsync(newCategory))
+            if (!string.IsNullOrWhiteSpace(newCategoryName))
             {
-                Categories.Add(newCategory); 
+                var newCategory = new Category
+                {
+                    CategoryName = NewCategoryName,
+                };
+
+                var success = await _categoriesService.AddCategoryAsync(newCategory);
+                if (success)
+                {
+                    await Shell.Current.DisplayAlert("Success", "Category created successfully!", "OK");
+                    await Shell.Current.GoToAsync("..");
+                }
+                else
+                {
+                    await Shell.Current.DisplayAlert("Error", "Failed to create category.", "OK");
+                }
             }
+            else
+            {
+                await Shell.Current.DisplayAlert("Validation Error", "All fields are required.", "OK");
+            }
+        }
+
+        [RelayCommand]
+        private async Task CancelCreateCategoryAsync()
+        {
+            await Shell.Current.GoToAsync("..");
         }
 
         [RelayCommand]
