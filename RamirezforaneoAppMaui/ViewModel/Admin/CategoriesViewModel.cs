@@ -34,12 +34,12 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
         }
 
         [RelayCommand]
-        private async Task NavigateToActionPageAsync()
+        private async Task NavigateToActionsPageAsync(Category selectedCategory)
         {
-            if (SelectedCategory != null)
+            if (selectedCategory != null)
             {
-                var route = $"{nameof(ActionsPage)}?CategoryId={SelectedCategory.CategoryId}";
-                await Shell.Current.GoToAsync(route);
+                SelectedCategory = selectedCategory;
+                await Shell.Current.GoToAsync("///ActionsCategoriesPage");
             }
         }
 

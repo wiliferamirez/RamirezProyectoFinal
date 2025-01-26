@@ -46,18 +46,21 @@
                             BackgroundColor="#FF5722"
                             TextColor="White" />
 
-                    <CollectionView ItemsSource="{Binding Categories}"
-                                    SelectionMode="Single"
-                                    SelectedItem="{Binding SelectedCategory, Mode=TwoWay}">
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Frame Padding="20"
-                                       Margin="5, 10, 5, 0">
-                                    <Label Text="{Binding CategoryName}" />
-                                </Frame>
+                    <ListView ItemsSource="{Binding Categories}"
+                              SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
+                              SelectionMode="Single"
+                              ItemTapped="OnCategoryTapped">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Frame Padding="20"
+                                               Margin="5, 10, 5, 0">
+                                        <Label Text="{Binding CategoryName}" />
+                                    </Frame>
+                                </ViewCell>
                             </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </StackLayout>
             </VerticalStackLayout>
         </Grid>
