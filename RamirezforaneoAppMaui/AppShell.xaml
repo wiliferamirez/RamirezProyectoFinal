@@ -7,6 +7,13 @@
     Shell.FlyoutBehavior="Disabled"
     Title="RamirezforaneoAppMaui">
 
+    <ShellContent 
+        Route="IndexEventsPage" 
+        ContentTemplate="{DataTemplate local:Views.Admin.EventsManagement.Index}" />
+
+
+
+
     <ShellContent
         ContentTemplate="{DataTemplate local:Views.Authentication.Login}"
         Route="LoginPage" />
@@ -28,6 +35,8 @@
     <ShellContent 
         Route="ActionsCategoriesPage" 
         ContentTemplate="{DataTemplate local:Views.Admin.CategoriesManagement.ActionsPage}" />
+    
+
 
 
     <ShellContent Title="Main" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />

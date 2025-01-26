@@ -7,15 +7,60 @@
     <ContentPage.BindingContext>
         <vm:EventsViewModel />
     </ContentPage.BindingContext>
+    <Grid RowDefinitions=".1*, .9*">
+        <Image Aspect="AspectFill" Source="students.jpg"/>
+        <Grid BackgroundColor="#303030" Opacity=".7"/>
+        <Grid ColumnDefinitions="*">
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5, -30, -5, -2"
+                    CornerRadius="30, 30, 0, 0"
+                    Fill="White"/>
+            <VerticalStackLayout Margin="30, 0, 30, 0">
+                <Image Aspect="AspectFit"
+                   HeightRequest="30"
+                   Source="logoapp.webp"/>
+                <Label FontAttributes="Bold"
+                   FontFamily="bold"
+                   FontSize="Large"
+                   Text="Events"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#2D2D2D"/>
+                <Label FontFamily="medium"
+                   Text="All Events"
+                   TextColor="#A3A3A4"
+                   HorizontalOptions="Center"/>
 
-    <CollectionView ItemsSource="{Binding Events}">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
                 <StackLayout>
-                    <Label Text="{Binding EventTitle}" />
-                    <Label Text="{Binding EventDescription}" />
+                    <Button Text="Show Categories" 
+                        Command="{Binding LoadEventsCommand}"
+                        Margin="5, 25, 5, 20"
+                        HeightRequest="35"
+                        BackgroundColor="Black"/>
+                    
+
+                    <CollectionView ItemsSource="{Binding Events}"
+                                SelectionMode="Single">
+                        <!--SelectionChangedCommand="{Binding NavigateToActionsPageCommand}"-->
+                        <!--SelectionChangedCommandParameter="{Binding SelectedCategory}">-->
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Padding="20"
+                                   Margin="5, 10, 5, 0">
+                                    <Label Text="{Binding EventTitle}" />
+                                    <Label Text="{Binding EventDescription}" />
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    
+                    <Button Text="Create Vew Event" 
+                            Margin="5, 5, 5, 20"
+                            HeightRequest="35"
+                            BackgroundColor="#373737"
+                            TextColor="White" />
                 </StackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
 </ContentPage>

@@ -43,7 +43,7 @@
                             Command="{Binding NavigateToCreateCategoryCommand}"
                             Margin="5, 5, 5, 20"
                             HeightRequest="50"
-                            BackgroundColor="#FF5722"
+                            BackgroundColor="#373737"
                             TextColor="White" />
 
                     <CollectionView ItemsSource="{Binding Categories}"
