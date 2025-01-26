@@ -23,6 +23,8 @@ namespace RamirezforaneoAppMaui
             builder.Services.AddTransient<Register>();
             builder.Services.AddTransient<Login>(); 
             builder.Services.AddTransient<LoginViewModel>();
+            builder.Services.AddSingleton<AuthenticationService>();
+            builder.Services.AddTransient<RegisterViewModel>();
 
 
 #if DEBUG

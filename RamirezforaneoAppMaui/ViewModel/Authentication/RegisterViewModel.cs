@@ -31,12 +31,28 @@ namespace RamirezforaneoAppMaui.ViewModel.Authentication
         [ObservableProperty]
         private bool isRegistering;
 
+        [ObservableProperty]
+        private List<string> states = new()
+        {
+            "Imbabura", "Pichincha", "Azuay", "Carchi", "Chimborazo",
+            "Cotopaxi", "Guayas", "Manabi", "Esmeraldas", "Loja", "Sto.Domingo"
+        };
+
+        [ObservableProperty]
+        private List<string> studyPrograms = new()
+        {
+            "Software", "Ciberseguridad", "Inteligencia Artificial",
+            "Administracion de Empresa", "Psicologia", "Negocios Internacionales",
+            "Medicina", "Odontologia"
+        };
+
+        [Obsolete("Default constructor is for design-time use only")]
+        public RegisterViewModel() : this(new AuthenticationService())
+        {
+        }
         public RegisterViewModel(AuthenticationService authenticationService)
         {
-            _authenticationService = authenticationService;
-        }
-        public RegisterViewModel()
-        {
+            _authenticationService = authenticationService ?? throw new ArgumentNullException(nameof(authenticationService));
             _httpClient = new HttpClient
             {
                 BaseAddress = new Uri("https://rh4p8xrf-5262.use2.devtunnels.ms/")
@@ -55,12 +71,12 @@ namespace RamirezforaneoAppMaui.ViewModel.Authentication
             var registerModel = new Register
             {
                 CedulaUser = CedulaUser,
-                UserName = Email,
+                Email = Email,
                 StateName = StateName,
                 StudyProgram = StudyProgram,
                 SessionNumber = SessionNumber,
-                UserCreationDate = DateTime.Now,
-                Password = Password
+                Password = Password,
+                UserCreationDate = DateTime.UtcNow 
             };
             var success = await _authenticationService.RegisterAsync(registerModel);
             if (success)

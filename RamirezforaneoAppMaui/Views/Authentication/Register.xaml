@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:RamirezforaneoAppMaui.ViewModel.Authentication"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="RamirezforaneoAppMaui.Views.Authentication.Register"
              Title="Register">
     <ContentPage.BindingContext>
@@ -45,47 +44,24 @@
                       Margin="10, 5, 10, 10"
                       VerticalOptions="Center"/>
 
-                <Picker 
+                <Picker ItemsSource="{Binding States}"
+                        SelectedItem="{Binding StateName}"
                         Title="Select the state you live in"
                         Margin="10, 5, 10, 10"
                         TitleColor="#2D2D2D">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Imbabura</x:String>
-                            <x:String>Pichincha</x:String>
-                            <x:String>Azuay</x:String>
-                            <x:String>Carchi</x:String>
-                            <x:String>Chimborazo</x:String>
-                            <x:String>Cotopaxi</x:String>
-                            <x:String>Guayas</x:String>
-                            <x:String>Manabi</x:String>
-                            <x:String>Esmeraldas</x:String>
-                            <x:String>Loja</x:String>
-                            <x:String>Sto.Domingo</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
                 </Picker>
 
-                <Picker 
+                <Picker ItemsSource="{Binding StudyPrograms}"
+                        SelectedItem="{Binding StudyProgram}"
                         Title="Select your Program"
                         Margin="10, 5, 10, 10"
                         TextColor="#2D2D2D">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Software</x:String>
-                            <x:String>Ciberseguridad</x:String>
-                            <x:String>Inteligencia Artificial</x:String>
-                            <x:String>Administracion de Empresa</x:String>
-                            <x:String>Psicologia</x:String>
-                            <x:String>Negocios Internacionales</x:String>
-                            <x:String>Medicina</x:String>
-                            <x:String>Odontologia</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
                 </Picker>
-                <Entry>
-                    <!--For session number -->
-                </Entry>
+                <Entry Text="{Binding SessionNumber}"
+                       Keyboard="Numeric"
+                       Placeholder="Session Number"
+                       Margin=" 10, 5, 10, 10"
+                       VerticalOptions="Center"/>
 
                 <Entry  Text="{Binding Password}"
                         TextColor="Black"
