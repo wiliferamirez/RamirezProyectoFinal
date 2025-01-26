@@ -22,7 +22,7 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
         public async Task LoadCategoriesAsync()
         {
             var categoriesList = await _categoriesService.GetCategoriesAsync();
-            categories = new ObservableCollection<Category>(categoriesList);
+            Categories = new ObservableCollection<Category>(categoriesList);
         }
     }
 }

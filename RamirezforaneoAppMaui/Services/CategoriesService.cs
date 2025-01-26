@@ -19,19 +19,12 @@ namespace RamirezforaneoAppMaui.Services
             try
             {
                 var response = await _httpClient.GetAsync("api/CategoriesManagement");
-                if (response.IsSuccessStatusCode)
-                {
-                    return await response.Content.ReadFromJsonAsync<List<Category>>();
-                }
-                else
-                {
-                    
-                    return new List<Category>();
-                }
+                response.EnsureSuccessStatusCode(); 
+
+                return await response.Content.ReadFromJsonAsync<List<Category>>();
             }
             catch (Exception ex)
             {
-                
                 return new List<Category>();
             }
         }

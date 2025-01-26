@@ -4,12 +4,10 @@
              xmlns:local="clr-namespace:RamirezforaneoAppMaui.ViewModel.Admin"
              x:Class="RamirezforaneoAppMaui.Views.Admin.CategoriesManagement.Index"
              Title="Index">
-    
+
     <ContentPage.BindingContext>
         <local:CategoriesViewModel />
     </ContentPage.BindingContext>
-
-
 
     <Grid RowDefinitions=".1*, .9*">
         <Image Aspect="AspectFill" Source="students.jpg"/>
@@ -22,21 +20,23 @@
                         Fill="White"/>
             <VerticalStackLayout Margin="30, 0, 30, 0">
                 <Image Aspect="AspectFit"
-               HeightRequest="30"
-               Source="logoapp.webp"/>
+                       HeightRequest="30"
+                       Source="logoapp.webp"/>
                 <Label FontAttributes="Bold"
-                   FontFamily="bold"
-                   FontSize="Medium"
-                   Text="Categories"
-                   HorizontalTextAlignment="Center"
-                   TextColor="#2D2D2D"/>
+                       FontFamily="bold"
+                       FontSize="Medium"
+                       Text="Categories"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#2D2D2D"/>
                 <Label FontFamily="medium"
-                   Text="All Categories"
-                   TextColor="#A3A3A4"
-                   HorizontalOptions="Center"/>
-                
+                       Text="All Categories"
+                       TextColor="#A3A3A4"
+                       HorizontalOptions="Center"/>
+
                 <StackLayout>
+
                     <Button Text="Load Categories" Command="{Binding LoadCategoriesCommand}" />
+
                     <CollectionView ItemsSource="{Binding Categories}">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
@@ -47,8 +47,6 @@
                         </CollectionView.ItemTemplate>
                     </CollectionView>
                 </StackLayout>
-
-
             </VerticalStackLayout>
         </Grid>
     </Grid>

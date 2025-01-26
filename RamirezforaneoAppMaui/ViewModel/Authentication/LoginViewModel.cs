@@ -25,7 +25,7 @@ namespace RamirezforaneoAppMaui.ViewModel.Authentication
         [RelayCommand]
         private async Task ToRegisterAsync()
         {
-            await Shell.Current.GoToAsync("///RegisterPage");
+            await Shell.Current.GoToAsync("///IndexCategoryPage");
         }
 
         [RelayCommand]
@@ -45,7 +45,7 @@ namespace RamirezforaneoAppMaui.ViewModel.Authentication
                 if (response.IsSuccessStatusCode)
                 {
                     var loginResponse = await response.Content.ReadFromJsonAsync<LoginResponse>();
-                    await Shell.Current.GoToAsync("///MainPage");
+                    await Shell.Current.GoToAsync("///IndexCategoryPage");
                 }
                 else
                 {
