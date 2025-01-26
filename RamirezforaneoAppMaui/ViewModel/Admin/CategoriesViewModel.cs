@@ -26,11 +26,13 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
             _categoriesService = new CategoriesService();
             Categories = new ObservableCollection<Category>();
         }
+
         [RelayCommand]
         private async Task NavigateToCreateCategoryAsync()
         {
             await Shell.Current.GoToAsync("///CreateCategoryPage");
         }
+
         [RelayCommand]
         private async Task NavigateToActionPageAsync()
         {
@@ -90,7 +92,7 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
         [RelayCommand]
         private async Task CancelCreateCategoryAsync()
         {
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync("///IndexCategoryPage");
         }
 
         [RelayCommand]
