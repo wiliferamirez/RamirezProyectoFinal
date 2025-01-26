@@ -4,6 +4,7 @@ using RamirezforaneoAppMaui.Models.Admin;
 using RamirezforaneoAppMaui.Services;
 using CommunityToolkit.Mvvm.Input;
 using RamirezforaneoAppMaui.Views.Admin.CategoriesManagement;
+using System;
 
 namespace RamirezforaneoAppMaui.ViewModel.Admin
 {
@@ -36,10 +37,10 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
         [RelayCommand]
         private async Task NavigateToActionsPageAsync(Category selectedCategory)
         {
+            SelectedCategory = selectedCategory;
+            Console.WriteLine("Selected Category: " + SelectedCategory.CategoryId);
             if (selectedCategory != null)
             {
-                SelectedCategory = selectedCategory;
-
                 var route = $"///ActionsCategoriesPage?CategoryId={selectedCategory.CategoryId}";
                 await Shell.Current.GoToAsync(route);
             }

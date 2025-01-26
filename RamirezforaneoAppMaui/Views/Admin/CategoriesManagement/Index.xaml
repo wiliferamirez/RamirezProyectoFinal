@@ -49,7 +49,7 @@
                     <CollectionView ItemsSource="{Binding Categories}"
                                     SelectionMode="Single"
                                     SelectionChangedCommand="{Binding NavigateToActionsPageCommand}"
-                                    SelectionChangedCommandParameter="{Binding SelectedItem}">
+                                    SelectionChangedCommandParameter="{Binding SelectedCategory}">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Frame Padding="20"
