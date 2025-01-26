@@ -46,8 +46,23 @@
                             <DataTemplate>
                                 <Frame Padding="15"
                                    Margin="5, 10, 5, 0">
-                                    <Label Text="{Binding EventTitle}" />
-                                    <Label Text="{Binding EventDescription}" />
+                                    <StackLayout>
+                                        <Label Text="{Binding EventTitle}" 
+                                               FontSize=" 14"
+                                               FontAttributes="Bold"/>
+                                        <BoxView HeightRequest="2"
+                                                 Color="Gray"
+                                                 HorizontalOptions="Fill"/>
+                                        <Label   Text="{Binding EventDescription}" />
+                                        <BoxView HeightRequest="2"
+                                                 Color="white"
+                                                 HorizontalOptions="Fill"/>
+                                        <Label   Text="{Binding EventLocation}" />
+                                        <BoxView HeightRequest="2"
+                                                 Color="white"
+                                                 HorizontalOptions="Fill"/>
+                                        <Label   Text="{Binding EventEndDate}" />
+                                    </StackLayout>
                                 </Frame>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
