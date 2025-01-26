@@ -1,10 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using RamirezforaneoAppMaui.Services;
-using System.Net.Http.Json;
-using System;
-using System.Text;
-using System.Threading.Tasks;
 using RamirezforaneoAppMaui.Models.Authentication;
 
 namespace RamirezforaneoAppMaui.ViewModel.Authentication
@@ -12,6 +8,7 @@ namespace RamirezforaneoAppMaui.ViewModel.Authentication
     public partial class RegisterViewModel : ObservableObject
     {
         private readonly AuthenticationService _authenticationService;
+        private readonly HttpClient _httpClient;
 
         [ObservableProperty]
         private string cedulaUser;
@@ -37,6 +34,13 @@ namespace RamirezforaneoAppMaui.ViewModel.Authentication
         public RegisterViewModel(AuthenticationService authenticationService)
         {
             _authenticationService = authenticationService;
+        }
+        public RegisterViewModel()
+        {
+            _httpClient = new HttpClient
+            {
+                BaseAddress = new Uri("https://rh4p8xrf-5262.use2.devtunnels.ms/")
+            };
         }
 
         [RelayCommand]

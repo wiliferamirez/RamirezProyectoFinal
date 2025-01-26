@@ -1,7 +1,5 @@
 namespace RamirezforaneoAppMaui.Views.Authentication;
 using RamirezforaneoAppMaui.ViewModel.Authentication;
-using RamirezforaneoAppMaui.Services;
-using CommunityToolkit.Mvvm.Input;
 
 
 
@@ -20,9 +18,9 @@ public partial class Login : ContentPage
 
 
 
-    private void OnRegisterButtonClicked(object sender, EventArgs e)
+    private async void OnRegisterButtonClicked(object sender, EventArgs e)
     {
-
+        await Shell.Current.GoToAsync("///RegisterPage");
     }
 
 }

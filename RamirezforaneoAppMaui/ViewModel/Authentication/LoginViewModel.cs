@@ -1,12 +1,6 @@
-﻿using RamirezforaneoAppMaui.Models.Authentication;
-using RamirezforaneoAppMaui.Services;
+﻿using RamirezforaneoAppMaui.Services;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
-using Newtonsoft.Json;
-using System;
-using System.Threading.Tasks;
-using System.Net.Http;
-using System.Text;
 using System.Net.Http.Json;
 
 namespace RamirezforaneoAppMaui.ViewModel.Authentication

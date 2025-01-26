@@ -89,7 +89,7 @@
                         HeightRequest="60"
                         Text="Create an Account"
                         TextColor="white"
-                        Command="{Binding ToRegiterCommand}"/>
+                        Clicked="OnRegisterButtonClicked"/>
 
                 </VerticalStackLayout>
             </Grid>

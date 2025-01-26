@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:RamirezforaneoAppMaui.ViewModel.Authentication"
              x:Class="RamirezforaneoAppMaui.Views.Authentication.Register"
              Title="Register">
+    <ContentPage.BindingContext>
+        <vm:RegisterViewModel />
+    </ContentPage.BindingContext>
+
     <Grid RowDefinitions=".1*, .9*">
         <Image Aspect="AspectFill" Source="students.jpg"/>
         <Grid BackgroundColor="#303030" Opacity=".7"/>
@@ -33,13 +38,13 @@
                        Margin="10, 50, 10, 10"
                        VerticalOptions="Center"/>
 
-                <Entry x:Name="EmailEntry"
+                <Entry Text="{Binding Email}"
                        TextColor="Black"
                        Placeholder="Email Udla"
                       Margin="10, 5, 10, 10"
                       VerticalOptions="Center"/>
 
-                <Picker x:Name="statePicker"
+                <Picker 
                         Title="Select the state you live in"
                         Margin="10, 5, 10, 10"
                         TitleColor="#2D2D2D">
@@ -60,7 +65,7 @@
                     </Picker.ItemsSource>
                 </Picker>
 
-                <Picker x:Name="programPicker"
+                <Picker 
                         Title="Select your Program"
                         Margin="10, 5, 10, 10"
                         TextColor="#2D2D2D">
@@ -78,11 +83,7 @@
                     </Picker.ItemsSource>
                 </Picker>
 
-                <DatePicker x:Name="BirthdayPickerRegister"
-                            TextColor="Black"
-                            Margin="10, 5, 10, 10"/>
-
-                <Entry  x:Name="PasswordEntry"
+                <Entry  Text="{Binding Password}"
                         TextColor="Black"
                         Placeholder="Password"
                         IsPassword="True"
@@ -95,7 +96,7 @@
                         Margin="10, 5, 10, 10"
                         HeightRequest="60"
                         TextColor="white"
-                        Clicked="OnRegisterClicked"/>
+                        Command="{Binding RegisterCommand}"/>
 
             </VerticalStackLayout>
         </Grid>
