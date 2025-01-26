@@ -2,8 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:RamirezforaneoAppMaui.ViewModel.Admin"
-             x:Class="RamirezforaneoAppMaui.Views.Admin.EventsManagement.Index"
-             Title="Index">
+             x:Class="RamirezforaneoAppMaui.Views.Admin.EventsManagement.Index">
     <ContentPage.BindingContext>
         <vm:EventsViewModel />
     </ContentPage.BindingContext>
@@ -32,7 +31,7 @@
                    HorizontalOptions="Center"/>
 
                 <StackLayout>
-                    <Button Text="Show Categories" 
+                    <Button Text="Show Events" 
                         Command="{Binding LoadEventsCommand}"
                         Margin="5, 25, 5, 20"
                         HeightRequest="35"
@@ -45,7 +44,7 @@
                         <!--SelectionChangedCommandParameter="{Binding SelectedCategory}">-->
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Frame Padding="20"
+                                <Frame Padding="15"
                                    Margin="5, 10, 5, 0">
                                     <Label Text="{Binding EventTitle}" />
                                     <Label Text="{Binding EventDescription}" />
@@ -54,7 +53,7 @@
                         </CollectionView.ItemTemplate>
                     </CollectionView>
                     
-                    <Button Text="Create Vew Event" 
+                    <Button Text="Create New Event" 
                             Margin="5, 5, 5, 20"
                             HeightRequest="35"
                             BackgroundColor="#373737"
