@@ -55,10 +55,11 @@ namespace RamirezforaneoAppMaui.ViewModel.Authentication
             var registerModel = new Register
             {
                 CedulaUser = CedulaUser,
-                Email = Email,
+                UserName = Email,
                 StateName = StateName,
                 StudyProgram = StudyProgram,
                 SessionNumber = SessionNumber,
+                UserCreationDate = DateTime.Now,
                 Password = Password
             };
             var success = await _authenticationService.RegisterAsync(registerModel);
