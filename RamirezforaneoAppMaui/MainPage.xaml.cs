@@ -28,6 +28,11 @@
         {
             await Shell.Current.GoToAsync("//LoginPage");
         }
+
+        private async void OnNavigateToGoogleSearchClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//GoogleResultsPage");
+        }
     }
 
 }

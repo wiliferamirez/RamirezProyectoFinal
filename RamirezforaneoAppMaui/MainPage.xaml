@@ -36,6 +36,13 @@
                         TextColor="white"
                         BackgroundColor="Black"
                         Clicked="OnNavigateToCategoriesClicked" />
+                
+                <Button Text="Go to Google Search"
+                        Margin="10, 5, 10, 10"
+                        HeightRequest="60"
+                        TextColor="white"
+                        BackgroundColor="Black"
+                        Clicked="OnNavigateToGoogleSearchClicked" />
 
                 <Button Text="Log Out"
                         Margin="10, 5, 10, 10"

@@ -30,4 +30,9 @@
         <ShellContent Route="IndexCategoryPage" ContentTemplate="{DataTemplate local:Views.Admin.CategoriesManagement.Index}" />
         <ShellContent Route="CreateCategoryPage" ContentTemplate="{DataTemplate local:Views.Admin.CategoriesManagement.CreateCategory}" />
     </FlyoutItem>
+
+    <FlyoutItem Title="Google Search Places" Icon="icon_categories.png">
+        <ShellContent Route="GoogleResultsPage" ContentTemplate="{DataTemplate local:Views.GoogleResults.Index}" />
+    </FlyoutItem>
+
 </Shell>
