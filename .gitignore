@@ -841,3 +841,7 @@ fabric.properties
 /RamirezforaneoAppMaui/obj/Debug/net8.0-android/lp/100/jl/AndroidManifest.xml
 /RamirezforaneoAppMaui/obj/Debug/net8.0-android/lp/101/jl/META-INF/com/android/build/gradle/aar-metadata.properties
 /RamirezforaneoAppMaui/obj/Debug/net8.0-android/case_map.txt
+/RamirezforaneoAppMaui/obj/Debug/net8.0-android/mauiimage.outputs
+/RamirezforaneoAppMaui/obj/Debug/net8.0-windows10.0.19041.0/win10-x64/Platforms/Windows/App.g.i.cs
+/RamirezforaneoAppMaui/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/RamirezforaneoAppMaui.nfloat.g.cs
+/RamirezforaneoAppMaui/obj/Debug/net8.0-ios/iossimulator-x64/RamirezforaneoAppMaui.nfloat.g.cs
