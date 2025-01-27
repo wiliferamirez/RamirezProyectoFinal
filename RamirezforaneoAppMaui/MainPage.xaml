@@ -4,19 +4,49 @@
              xmlns:local="clr-namespace:RamirezforaneoAppMaui"
              x:Class="RamirezforaneoAppMaui.MainPage">
 
-    <VerticalStackLayout Spacing="25" Padding="30">
+    <Grid RowDefinitions=".1*, .9*">
+        <Image Aspect="AspectFill" Source="students.jpg"/>
+        <Grid BackgroundColor="#303030" Opacity=".7"/>
+        <Grid ColumnDefinitions="*">
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5, -30, -5, -2"
+                         CornerRadius="30, 30, 0, 0"
+                         Fill="White"/>
+            
+            <VerticalStackLayout Spacing="25" Padding="30">
 
-        <Button Text="Go to Markets Management"
-                Clicked="OnNavigateToMarketsClicked" />
+                <Button Text="Go to Markets Management"
+                        Margin="10, 5, 10, 10"
+                        HeightRequest="60"
+                        TextColor="white"
+                        BackgroundColor="Black"
+                        Clicked="OnNavigateToMarketsClicked" />
 
-        <Button Text="Go to Events Management"
-                Clicked="OnNavigateToEventsClicked" />
+                <Button Text="Go to Events Management"
+                        Margin="10, 5, 10, 10"
+                        HeightRequest="60"
+                        TextColor="white"
+                        BackgroundColor="Black"
+                        Clicked="OnNavigateToEventsClicked" />
 
-        <Button Text="Go to Categories Management"
-                Clicked="OnNavigateToCategoriesClicked" />
+                <Button Text="Go to Categories Management"
+                        Margin="10, 5, 10, 10"
+                        HeightRequest="60"
+                        TextColor="white"
+                        BackgroundColor="Black"
+                        Clicked="OnNavigateToCategoriesClicked" />
 
-        <Button Text="Log Out"
-                Clicked="OnLogoutClicked" />
-    </VerticalStackLayout>
+                <Button Text="Log Out"
+                        Margin="10, 5, 10, 10"
+                        HeightRequest="60"
+                        TextColor="white"
+                        BackgroundColor="Black"
+                        Clicked="OnLogoutClicked" />
+            </VerticalStackLayout>
 
+        </Grid>
+    </Grid>
+
+    
 </ContentPage>
