@@ -13,11 +13,9 @@
 
     <ShellContent Route="RegisterPage" Title="Register" ContentTemplate="{DataTemplate local:Views.Authentication.Register}" />
 
-
     <FlyoutItem Title="Main" Icon="icon_home.png">
         <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
     </FlyoutItem>
-
 
     <FlyoutItem Title="Market Management" Icon="icon_market.png">
         <ShellContent Route="IndexMarketsPage" ContentTemplate="{DataTemplate local:Views.Admin.MarketsManagement.Index}" />

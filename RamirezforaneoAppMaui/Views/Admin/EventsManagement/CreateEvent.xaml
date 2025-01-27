@@ -37,11 +37,7 @@
                        Text="{Binding NewEventTitle}"
                        Margin="10, 5, 10, 10"
                        ClearButtonVisibility="WhileEditing" />
-                    
-                    <Entry Placeholder="Event Description"
-                       Text="{Binding NewEventDescription}"
-                       Margin="10, 5, 10, 10"
-                       ClearButtonVisibility="WhileEditing" />
+
                     <Entry Placeholder="Event Description"
                        Text="{Binding NewEventDescription}"
                        Margin="10, 5, 10, 10"
