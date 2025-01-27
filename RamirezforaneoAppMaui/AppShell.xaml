@@ -25,9 +25,11 @@
 
     <FlyoutItem Title="Events Management" Icon="icon_event.png">
         <ShellContent Route="IndexEventsPage" ContentTemplate="{DataTemplate local:Views.Admin.EventsManagement.Index}" />
+        <ShellContent Route="CreateEventPage" ContentTemplate="{DataTemplate local:Views.Admin.EventsManagement.CreateEvent}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Categories Management" Icon="icon_categories.png">
         <ShellContent Route="IndexCategoryPage" ContentTemplate="{DataTemplate local:Views.Admin.CategoriesManagement.Index}" />
+        <ShellContent Route="CreateCategoryPage" ContentTemplate="{DataTemplate local:Views.Admin.CategoriesManagement.CreateCategory}" />
     </FlyoutItem>
 </Shell>

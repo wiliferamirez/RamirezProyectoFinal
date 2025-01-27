@@ -1,4 +1,5 @@
-﻿using RamirezforaneoAppMaui.ViewModel.Admin;
+﻿using Microsoft.Maui.Controls;
+
 namespace RamirezforaneoAppMaui
 {
     public partial class AppShell : Shell
@@ -6,7 +7,7 @@ namespace RamirezforaneoAppMaui
         public AppShell()
         {
             InitializeComponent();
-            BindingContext = new AppShellViewModel();
         }
+
     }
 }
