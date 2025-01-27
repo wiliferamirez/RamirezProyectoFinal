@@ -81,6 +81,9 @@
 	  <MauiXaml Update="Views\Admin\EventsManagement\Index.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Admin\MarketsManagement\Index.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Authentication\Login.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

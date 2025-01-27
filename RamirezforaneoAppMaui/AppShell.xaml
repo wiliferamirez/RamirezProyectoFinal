@@ -7,6 +7,13 @@
     Shell.FlyoutBehavior="Disabled"
     Title="RamirezforaneoAppMaui">
 
+
+    <ShellContent 
+        Route="IndexMarketsPage" 
+        ContentTemplate="{DataTemplate local:Views.Admin.MarketsManagement.Index}" />
+
+
+
     <ShellContent 
         Route="IndexEventsPage" 
         ContentTemplate="{DataTemplate local:Views.Admin.EventsManagement.Index}" />
