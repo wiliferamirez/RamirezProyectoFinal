@@ -19,8 +19,17 @@ namespace RamirezforaneoAppMaui.Services
         public async Task<List<Market>> GetMarketsAsync()
         {
             var response = await _httpClient.GetStringAsync("https://rh4p8xrf-5262.use2.devtunnels.ms/api/MarketsManagement");
-            var markets = JsonSerializer.Deserialize<List<Market>>(response);
-            return markets;
+            var marketItems = JsonSerializer.Deserialize<List<Market>>(response);
+
+            // Handle missing ItemSeller and Category values
+            foreach (var market in marketItems)
+            {
+                // Set default values if null
+                market.ItemSeller = market.ItemSeller ?? "No Seller Info";  // Default if null
+                market.Category = market.Category ?? "Uncategorized";      // Default if null
+            }
+
+            return marketItems;
         }
 
         // Create a new market item

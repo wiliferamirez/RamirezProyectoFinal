@@ -11,19 +11,14 @@ namespace RamirezforaneoAppMaui.Models.Admin
     public class Market
     {
         public int MarketItemId { get; set; }
-
-        public string ItemSellerId { get; set; }
-
-        public string ItemName { get; set; }
-
-        public string ItemDescription { get; set; }
-
-        public string ItemImageUrl { get; set; }
-
-        public decimal ItemPrice { get; set; }
-
         public int CategoryId { get; set; }
-
-        public DateTime ItemCreationDate { get; set; } = DateTime.Now;
+        public DateTime ItemCreationDate { get; set; }
+        public string ItemDescription { get; set; }
+        public string ItemImageUrl { get; set; }
+        public string ItemName { get; set; }
+        public decimal ItemPrice { get; set; }
+        public string ItemSellerId { get; set; }
+        public string ItemSeller { get; set; } 
+        public string Category { get; set; }
     }
 }

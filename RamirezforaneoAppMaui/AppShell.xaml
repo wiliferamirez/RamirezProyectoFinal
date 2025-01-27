@@ -4,52 +4,30 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:RamirezforaneoAppMaui"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutBehavior="Flyout"
     Title="RamirezforaneoAppMaui">
 
 
-    <ShellContent 
-        Route="IndexMarketsPage" 
-        ContentTemplate="{DataTemplate local:Views.Admin.MarketsManagement.Index}" />
+    <ShellContent Route="LoginPage" Title="Login" ContentTemplate="{DataTemplate local:Views.Authentication.Login}" />
 
 
-
-    <ShellContent 
-        Route="IndexEventsPage" 
-        ContentTemplate="{DataTemplate local:Views.Admin.EventsManagement.Index}" />
-    <ShellContent 
-        Route="CreateEventPage" 
-        ContentTemplate="{DataTemplate local:Views.Admin.EventsManagement.CreateEvent}" />
+    <ShellContent Route="RegisterPage" Title="Register" ContentTemplate="{DataTemplate local:Views.Authentication.Register}" />
 
 
+    <FlyoutItem Title="Main" Icon="icon_home.png">
+        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
 
 
-    <ShellContent
-        ContentTemplate="{DataTemplate local:Views.Authentication.Login}"
-        Route="LoginPage" />
+    <FlyoutItem Title="Market Management" Icon="icon_market.png">
+        <ShellContent Route="IndexMarketsPage" ContentTemplate="{DataTemplate local:Views.Admin.MarketsManagement.Index}" />
+    </FlyoutItem>
 
-    <ShellContent
-        Title="RegisterPage"
-        ContentTemplate="{DataTemplate local:Views.Authentication.Register}"
-        Route="RegisterPage" />
+    <FlyoutItem Title="Events Management" Icon="icon_event.png">
+        <ShellContent Route="IndexEventsPage" ContentTemplate="{DataTemplate local:Views.Admin.EventsManagement.Index}" />
+    </FlyoutItem>
 
-    <ShellContent
-        Title="IndexCategoryPage"
-        ContentTemplate="{DataTemplate local:Views.Admin.CategoriesManagement.Index}"
-        Route="IndexCategoryPage" />
-    
-    <ShellContent 
-        Route="CreateCategoryPage" 
-        ContentTemplate="{DataTemplate local:Views.Admin.CategoriesManagement.CreateCategory}" />
-
-    <ShellContent 
-        Route="ActionsCategoriesPage" 
-        ContentTemplate="{DataTemplate local:Views.Admin.CategoriesManagement.ActionsPage}" />
-    
-
-
-
-    <ShellContent Title="Main" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
-    
-
+    <FlyoutItem Title="Categories Management" Icon="icon_categories.png">
+        <ShellContent Route="IndexCategoryPage" ContentTemplate="{DataTemplate local:Views.Admin.CategoriesManagement.Index}" />
+    </FlyoutItem>
 </Shell>

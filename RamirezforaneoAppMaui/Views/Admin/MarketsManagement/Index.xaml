@@ -6,8 +6,8 @@
 
     <ContentPage.BindingContext>
         <local:MarketsViewModel />
-        
     </ContentPage.BindingContext>
+
     <Grid RowDefinitions=".1*, .9*">
         <Image Aspect="AspectFill" Source="students.jpg"/>
         <Grid BackgroundColor="#303030" Opacity=".7"/>
@@ -15,66 +15,54 @@
         </Grid>
         <Grid Grid.Row="1">
             <RoundRectangle Margin="-5, -30, -5, -2"
-                CornerRadius="30, 30, 0, 0"
-                Fill="White"/>
+                            CornerRadius="30, 30, 0, 0"
+                            Fill="White"/>
             <VerticalStackLayout Margin="30, 0, 30, 0">
-                <Image  Aspect="AspectFit"
-                        HeightRequest="30"
-                        Source="logoapp.webp"/>
-                <Label  FontAttributes="Bold"
-                        FontFamily="bold"
-                        FontSize="Large"
-                        Text="Market"
-                        HorizontalTextAlignment="Center"
-                        TextColor="#2D2D2D"/>
+                <Image Aspect="AspectFit"
+                       HeightRequest="30"
+                       Source="logoapp.webp"/>
+                <Label FontAttributes="Bold"
+                       FontFamily="bold"
+                       FontSize="Large"
+                       Text="Market"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#2D2D2D"/>
                 <Label FontFamily="medium"
-                        Text="All Items"
-                        TextColor="#A3A3A4"
-                        HorizontalOptions="Center"/>
+                       Text="All Items"
+                       TextColor="#A3A3A4"
+                       HorizontalOptions="Center"/>
 
                 <StackLayout>
                     <Button Text="Show Items" 
-                            Command="{Binding LoadEventsCommand}"
+                            Command="{Binding LoadMarketsCommand}"
                             Margin="5, 25, 5, 20"
                             HeightRequest="35"
                             BackgroundColor="Black"/>
                     <Button Text="Add New Item"
-                            Command="{Binding NavigateToCreateEventCommand}"
+                            Command="{Binding NavigateToCreateMarketCommand}"
                             Margin="5, 5, 5, 20"
                             HeightRequest="35"
                             BackgroundColor="#373737"
                             TextColor="White" />
 
-
-                    <CollectionView ItemsSource="{Binding Events}"
-                            SelectionMode="Single">
+                    <!-- CollectionView for Market Items -->
+                    <CollectionView ItemsSource="{Binding Markets}">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Frame Padding="15"
-                               Margin="5, 10, 5, 0">
+                                <Frame Padding="15" Margin="5, 10, 5, 0">
                                     <StackLayout>
-                                        <Label Text="{Binding EventTitle}" 
-                                                FontSize=" 14"
-                                                FontAttributes="Bold"/>
-                                        <BoxView HeightRequest="2"
-                                                 Color="Gray"
-                                                 HorizontalOptions="Fill"/>
-                                        <Label   Text="{Binding EventDescription}" />
-                                        <BoxView HeightRequest="2"
-                                             Color="white"
-                                             HorizontalOptions="Fill"/>
-                                        <Label   Text="{Binding EventLocation}" />
-                                        <BoxView HeightRequest="2"
-                                             Color="white"
-                                             HorizontalOptions="Fill"/>
-                                        <Label   Text="{Binding EventEndDate}" />
+                                        <Label Text="{Binding ItemName}" FontSize="14" FontAttributes="Bold"/>
+                                        <BoxView HeightRequest="2" Color="Gray" HorizontalOptions="Fill"/>
+                                        <Label Text="{Binding ItemDescription}" />
+                                        <BoxView HeightRequest="2" Color="white" HorizontalOptions="Fill"/>
+                                        <Label Text="{Binding ItemPrice, StringFormat='{0:C}'}" />
+                                        <BoxView HeightRequest="2" Color="white" HorizontalOptions="Fill"/>
+                                        <Label Text="{Binding ItemCreationDate, StringFormat='{0:MMMM dd, yyyy}'}" />
                                     </StackLayout>
                                 </Frame>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-
-
                 </StackLayout>
             </VerticalStackLayout>
         </Grid>

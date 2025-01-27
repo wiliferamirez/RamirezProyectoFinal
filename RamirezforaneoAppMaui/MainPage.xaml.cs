@@ -9,16 +9,24 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnNavigateToMarketsClicked(object sender, EventArgs e)
         {
-            count++;
+            await Shell.Current.GoToAsync("//IndexMarketsPage");
+        }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+        private async void OnNavigateToEventsClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//IndexEventsPage");
+        }
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        private async void OnNavigateToCategoriesClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//IndexCategoryPage");
+        }
+
+        private async void OnLogoutClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//LoginPage");
         }
     }
 

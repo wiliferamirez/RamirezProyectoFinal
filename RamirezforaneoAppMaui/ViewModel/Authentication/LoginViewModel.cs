@@ -45,7 +45,7 @@ namespace RamirezforaneoAppMaui.ViewModel.Authentication
                 if (response.IsSuccessStatusCode)
                 {
                     var loginResponse = await response.Content.ReadFromJsonAsync<LoginResponse>();
-                    await Shell.Current.GoToAsync("///IndexCategoryPage");
+                    await Shell.Current.GoToAsync("//MainPage");
                 }
                 else
                 {

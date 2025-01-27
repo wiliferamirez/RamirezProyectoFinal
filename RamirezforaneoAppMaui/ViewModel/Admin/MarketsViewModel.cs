@@ -14,25 +14,13 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
         private ObservableCollection<Market> markets;
 
         [ObservableProperty]
-        private string newMarketTitle;
+        private string newMarketName;
 
         [ObservableProperty]
         private string newMarketDescription;
 
         [ObservableProperty]
-        private int selectedCategoryId;
-
-        [ObservableProperty]
-        private string newMarketLocation;
-
-        [ObservableProperty]
-        private DateTime marketStartDate;
-
-        [ObservableProperty]
-        private DateTime marketEndDate;
-
-        [ObservableProperty]
-        private Category selectedCategory;
+        private decimal newMarketPrice;
 
         public MarketsViewModel()
         {
@@ -44,44 +32,49 @@ namespace RamirezforaneoAppMaui.ViewModel.Admin
         [RelayCommand]
         private async Task LoadMarketsAsync()
         {
-            var marketList = await _marketsService.GetMarketsAsync();
-            Markets = new ObservableCollection<Market>(marketList);
+            var marketItems = await _marketsService.GetMarketsAsync();
+            Markets.Clear();
+
+ 
+            foreach (var market in marketItems)
+            {
+                var marketToAdd = new Market
+                {
+                    MarketItemId = market.MarketItemId,
+                    CategoryId = market.CategoryId,
+                    ItemCreationDate = market.ItemCreationDate,
+                    ItemDescription = market.ItemDescription,
+                    ItemImageUrl = market.ItemImageUrl,
+                    ItemName = market.ItemName,
+                    ItemPrice = market.ItemPrice,
+                    ItemSeller = market.ItemSeller,  
+                    Category = market.Category  
+                };
+
+                Markets.Add(marketToAdd);
+            }
         }
 
         [RelayCommand]
-        public async Task CreateMarketAsync()
+        private async Task AddMarketAsync()
         {
-            if (!string.IsNullOrWhiteSpace(newMarketTitle) &&
-                !string.IsNullOrWhiteSpace(newMarketDescription) &&
-                !string.IsNullOrWhiteSpace(newMarketLocation) &&
-                marketStartDate != default &&
-                marketEndDate != default)
+            var newMarket = new Market
             {
-                var newMarket = new Market
-                {
-                    EventTitle = newMarketTitle,
-                    EventDescription = newMarketDescription,
-                    CategoryId = selectedCategoryId,
-                    EventLocation = newMarketLocation,
-                    EventStartDate = marketStartDate,
-                    EventEndDate = marketEndDate
-                };
+                ItemName = newMarketName,
+                ItemDescription = newMarketDescription,
+                ItemPrice = newMarketPrice
+            };
 
-                var success = await _marketsService.AddMarketAsync(newMarket);
-                if (success)
-                {
-                    // Handle success (e.g., navigate back, show success message)
-                }
-                else
-                {
-                    // Handle failure (e.g., show error message)
-                }
+            bool success = await _marketsService.AddMarketAsync(newMarket);
+
+            if (success)
+            {
+                await LoadMarketsAsync();  
             }
             else
             {
-                // Handle validation errors (e.g., show validation error messages)
+
             }
         }
-
     }
 }
